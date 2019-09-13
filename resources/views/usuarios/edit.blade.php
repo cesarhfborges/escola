@@ -14,7 +14,7 @@
                         </h4>
                     </div>
                     <div class="card-body">
-                        <form method="post" action="{{ route('perfil.update', Auth::id()) }}">
+                        <form method="post" action="{{ route('usuarios.update', $usuario->id) }}">
                             @csrf
                             @method('PATCH')
                             <div class="row">

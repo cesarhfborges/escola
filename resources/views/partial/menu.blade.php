@@ -15,7 +15,7 @@
     <div class="sidebar-wrapper">
         <div class="user">
             <div class="photo">
-                <img src="{{ asset('assets/img/faces/marc.jpg') }}" />
+                <img src="@if (file_exists(Auth::user()->avatar)) {{ Auth::user()->avatar }} @else {{ asset('assets/img/faces/marc.jpg') }} @endif" />
             </div>
             <div class="user-info">
                 <a data-toggle="collapse" href="#collapseExample" class="username">
@@ -27,15 +27,9 @@
                 <div class="collapse" id="collapseExample">
                     <ul class="nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <span class="sidebar-mini"> MP </span>
-                                <span class="sidebar-normal"> My Profile </span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <span class="sidebar-mini"> EP </span>
-                                <span class="sidebar-normal"> Edit Profile </span>
+                            <a class="nav-link" href="{{ route('perfil.index') }}">
+                                <span class="sidebar-mini"> P </span>
+                                <span class="sidebar-normal"> Perfil </span>
                             </a>
                         </li>
                         <li class="nav-item">
@@ -49,13 +43,13 @@
             </div>
         </div>
         <ul class="nav">
-            <li class="nav-item active ">
+            <li class="nav-item {{ Request::is('home') ? 'active' : '' }}">
                 <a class="nav-link" href="{{ route('home') }}">
                     <i class="material-icons">dashboard</i>
                     <p> Dashboard </p>
                 </a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item {{ Request::is('usuarios', 'usuarios/*') ? 'active' : '' }}">
                 <a class="nav-link" href="{{ route('usuarios.index') }}">
                     <i class="material-icons">dashboard</i>
                     <p> Usuários </p>

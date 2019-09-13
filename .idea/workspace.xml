@@ -2,7 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="791ead94-c4a5-498e-9ad8-4b19119a04c6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/symfony2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/usuarios/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UsersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UsersController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/partial/menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partial/menu.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/usuarios/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/usuarios/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/usuarios/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/usuarios/index.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -108,6 +116,7 @@
   <component name="ProjectId" id="1QkCH8pTgJAjD9YlEkaK3vYclTS" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -149,6 +158,7 @@
       <updated>1568305116973</updated>
       <workItem from="1568305118566" duration="16344000" />
       <workItem from="1568322198700" duration="256000" />
+      <workItem from="1568327260189" duration="5030000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1568322282082</created>
@@ -168,7 +178,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

@@ -9,7 +9,14 @@
                         <div class="card-icon">
                             <i class="material-icons">assignment</i>
                         </div>
-                        <h4 class="card-title">Usuários</h4>
+                        <div class="row">
+                            <div class="col-6">
+                                <h4 class="card-title">Usuários</h4>
+                            </div>
+                            <div class="col-6">
+                                <a class="btn btn-success float-right" href="{{ route('usuarios.create') }}">Adicionar</a>
+                            </div>
+                        </div>
                     </div>
                     <div class="card-body">
                         <div class="toolbar">
@@ -47,7 +54,7 @@
                                         <td>{{ $usuario->cargo }}</td>
                                         <td class="text-right">
                                             <a href="{{ route('usuarios.edit', ['usuario' => $usuario]) }}" class="btn btn-link btn-warning btn-just-icon edit"><i class="material-icons">dvr</i></a>
-                                            <a href="{{ route('usuarios.destroy', ['usuario' => $usuario]) }}" class="btn btn-link btn-danger btn-just-icon remove"><i class="material-icons">close</i></a>
+                                            <button type="button" id="btnExclude" data-value="{{ route('usuarios.destroy', ['usuario' => $usuario]) }}" class="btn btn-link btn-danger btn-just-icon remove"><i class="material-icons">close</i></button>
                                         </td>
                                     </tr>
                                 @endforeach
@@ -63,4 +70,23 @@
         </div>
         <!-- end row -->
     </div>
+@endsection
+
+
+@section('jsimport')
+    <script>
+        $( document ).ready(function() {
+            $('#btnExclude').on('click', function() {
+                swal({
+                    title: 'Excluir usuário ?',
+                    text: "Atenção, esta ação não poderá ser feita!",
+                    type: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Sim, delete!'
+                });
+            });
+        });
+    </script>
 @endsection
