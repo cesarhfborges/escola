@@ -12,7 +12,9 @@
         "fideloper/proxy": "^4.0",
         "laravel/framework": "5.8.*",
         "laravel/tinker": "^1.0",
+        "lucascudo/laravel-pt-br-localization": "^1.0",
         "nesbot/carbon": "^2.24",
+        "qcod/laravel-imageup": "^1.0",
         "yajra/laravel-datatables-oracle": "~9.0"
     },
     "require-dev": {

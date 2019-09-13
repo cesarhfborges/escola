@@ -14,7 +14,8 @@
                                 <h4 class="card-title">Usuários</h4>
                             </div>
                             <div class="col-6">
-                                <a class="btn btn-success float-right" href="{{ route('usuarios.create') }}">Adicionar</a>
+                                <a class="btn btn-success float-right"
+                                   href="{{ route('usuarios.create') }}">Adicionar</a>
                             </div>
                         </div>
                     </div>
@@ -23,43 +24,49 @@
                             <!--        Here you can write extra buttons/actions for the toolbar              -->
                         </div>
                         <div class="material-datatables">
-                            <table id="datatables" class="table table-striped table-no-bordered table-hover" cellspacing="0" width="100%" style="width:100%">
-                                <thead>
-                                <tr>
-                                    <th>Nome</th>
-                                    <th>Sobrenome</th>
-                                    <th>E-Mail</th>
-                                    <th>Empresa</th>
-                                    <th>Data</th>
-                                    <th class="disabled-sorting text-right">Opções</th>
-                                </tr>
-                                </thead>
-                                <tfoot>
-                                <tr>
-                                    <th>Nome</th>
-                                    <th>Sobrenome</th>
-                                    <th>E-Mail</th>
-                                    <th>Empresa</th>
-                                    <th>Data</th>
-                                    <th class="text-right">Opções</th>
-                                </tr>
-                                </tfoot>
-                                <tbody>
-                                @foreach($usuarios as $usuario)
+                            <form action="POST">
+                                @csrf
+                                @method('POST')
+                                <table id="datatables" class="table table-striped table-no-bordered table-hover" cellspacing="0" width="100%" style="width:100%">
+                                    <thead>
                                     <tr>
-                                        <td>{{ $usuario->nome }}</td>
-                                        <td>{{ $usuario->sobrenome }}</td>
-                                        <td>{{ $usuario->email }}</td>
-                                        <td>{{ $usuario->empresa }}</td>
-                                        <td>{{ $usuario->cargo }}</td>
-                                        <td class="text-right">
-                                            <a href="{{ route('usuarios.edit', ['usuario' => $usuario]) }}" class="btn btn-link btn-warning btn-just-icon edit"><i class="material-icons">dvr</i></a>
-                                            <button type="button" id="btnExclude" data-value="{{ route('usuarios.destroy', ['usuario' => $usuario]) }}" class="btn btn-link btn-danger btn-just-icon remove"><i class="material-icons">close</i></button>
-                                        </td>
+                                        <th>Nome</th>
+                                        <th>Sobrenome</th>
+                                        <th>E-Mail</th>
+                                        <th>Empresa</th>
+                                        <th>Data</th>
+                                        <th class="disabled-sorting text-right">Opções</th>
                                     </tr>
-                                @endforeach
-                                </tbody>
-                            </table>
+                                    </thead>
+                                    <tfoot>
+                                    <tr>
+                                        <th>Nome</th>
+                                        <th>Sobrenome</th>
+                                        <th>E-Mail</th>
+                                        <th>Empresa</th>
+                                        <th>Data</th>
+                                        <th class="text-right">Opções</th>
+                                    </tr>
+                                    </tfoot>
+                                    <tbody>
+                                    @foreach($usuarios as $usuario)
+                                        <tr>
+                                            <td>{{ $usuario->nome }}</td>
+                                            <td>{{ $usuario->sobrenome }}</td>
+                                            <td>{{ $usuario->email }}</td>
+                                            <td>{{ $usuario->empresa }}</td>
+                                            <td>{{ $usuario->cargo }}</td>
+                                            <td class="text-right">
+                                                <a href="{{ route('usuarios.edit', ['usuario' => $usuario]) }}"
+                                                   class="btn btn-link btn-warning btn-just-icon edit"><i
+                                                        class="material-icons">dvr</i></a>
+                                                <a href="javascript:;" onclick="" test="" class="btn btn-link btn-danger btn-just-icon remove"><i class="material-icons">close</i></a>
+                                            </td>
+                                        </tr>
+                                    @endforeach
+                                    </tbody>
+                                </table>
+                            </form>
                         </div>
                     </div>
                     <!-- end content-->
@@ -75,8 +82,23 @@
 
 @section('jsimport')
     <script>
-        $( document ).ready(function() {
-            $('#btnExclude').on('click', function() {
+        $(document).ready(function () {
+
+            function deleteData(id)
+            {
+                let url = '{{ route('usuarios.destroy', ['usuario' => $usuario]) }}';
+                url = url.replace(':id', id);
+                $("#deleteForm").attr('action', url);
+            }
+
+            function formSubmit()
+            {
+                $("#deleteForm").submit();
+            }
+
+
+            $('.remove').on('click', function (event) {
+                event.preventDefault();
                 swal({
                     title: 'Excluir usuário ?',
                     text: "Atenção, esta ação não poderá ser feita!",
@@ -84,8 +106,14 @@
                     showCancelButton: true,
                     confirmButtonColor: '#3085d6',
                     cancelButtonColor: '#d33',
-                    confirmButtonText: 'Sim, delete!'
-                });
+                    confirmButtonText: 'Sim, delete!',
+                    cancelButtonText: 'Cancelar',
+                    reverseButtons: true,
+                }).then((result) => {
+                    if (result.value) {
+                        window.location.href = $(this).attr('href');
+                    }
+                })
             });
         });
     </script>

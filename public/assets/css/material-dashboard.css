@@ -27535,7 +27535,11 @@ select.selectpicker {
 }
 
 .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
-  width: 220px;
+  width: 100%;
+}
+
+.status-filter{
+    width:275px!important;
 }
 
 .bootstrap-select .dropdown-toggle:focus {
@@ -29288,5 +29292,7 @@ select.selectpicker {
     display: none !important;
   }
 }
+
+
 
 /*# sourceMappingURL=dashboard-pro.css.map */

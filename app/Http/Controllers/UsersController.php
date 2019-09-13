@@ -104,32 +104,40 @@ class UsersController extends Controller
      * @param Request $request
      * @param int $id
      * @return Response
-     * @throws ValidationException
      */
     public function update(Request $request, $id)
     {
-        $this->validate(request(),[
-        'nome' => 'required|string|min:3|max:200',
-//            'email' => 'required|email|unique:users',
+
+        $validator = Validator::make($request->all(), [
+            'nome' => 'required|string|min:3|max:200',
+//            'avatar' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
 
-        $usuario = User::findOrFail($id);
-        $usuario->nome = $request->nome;
-        $usuario->sobrenome = $request->sobrenome;
-        $usuario->empresa = $request->empresa;
-        $usuario->cargo = $request->cargo;
-        $usuario->email = $request->email ?? $usuario->email;
-        $usuario->password = $request->password ?? $usuario->password;
-        $usuario->endereco = $request->endereco;
-        $usuario->numero = $request->numero;
-        $usuario->bairro = $request->bairro;
-        $usuario->cidade = $request->cidade;
-        $usuario->uf = $request->uf;
-        $usuario->complemento = $request->complemento;
+        if ($validator->fails()) {
+            return back()->with('error', $validator->errors());
+        }
 
+        try{
+            $usuario = User::findOrFail($id);
+            $usuario->nome = $request->nome;
+            $usuario->sobrenome = $request->sobrenome;
+            $usuario->empresa = $request->empresa;
+            $usuario->cargo = $request->cargo;
+            $usuario->email = $request->email ?? $usuario->email;
+            $usuario->password = $request->password ?? $usuario->password;
+            $usuario->endereco = $request->endereco;
+            $usuario->numero = $request->numero;
+            $usuario->bairro = $request->bairro;
+            $usuario->cidade = $request->cidade;
+            $usuario->uf = $request->uf;
+            $usuario->complemento = $request->complemento;
+            $request->file('avatar') ? $usuario->uploadImage($request->file('avatar'), 'avatar') : null;
             $usuario->save();
-//        Flash::message('Your account has been updated!');
-        return back()->with('success','Perfil Atualizado com sucesso');
+    //        Flash::message('Your account has been updated!');
+            return back()->with('success','Perfil Atualizado com Sucesso');
+        } catch (\Exception $e) {
+            return back()->with('error', $e->getMessage());
+        }
     }
 
     /**
