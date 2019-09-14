@@ -55,16 +55,16 @@
                     <p> Usuários </p>
                 </a>
             </li>
-            <li class="nav-item {{ Request::is('usuarios', 'usuarios/*') ? 'active' : '' }}">
-                <a class="nav-link" data-toggle="collapse" href="#pagesExamples">
+            <li class="nav-item {{ Request::is('cursos/*') ? 'active' : '' }}">
+                <a class="nav-link {{ Request::is('cursos/*') ? '' : 'collapsed' }}" data-toggle="collapse" href="#pagesExamples" aria-expanded="{{ Request::is('cursos/*') ? 'true' : 'false' }}">
                     <i class="material-icons">image</i>
                     <p> Cursos
                         <b class="caret"></b>
                     </p>
                 </a>
-                <div class="collapse" id="pagesExamples">
-                    <ul class="nav">
-                        <li class="nav-item {{ Request::is('usuarios/index') ? 'active' : '' }}">
+                <div class="collapse {{ Request::is('cursos/*') ? 'show' : '' }}" id="pagesExamples">
+                    <ul class="nav ">
+                        <li class="nav-item {{ Request::is('cursos/categorias', 'cursos/categorias/*') ? 'active' : '' }}">
                             <a class="nav-link" href="{{ route('categorias.index') }}">
                                 <span class="sidebar-mini"> C </span>
                                 <span class="sidebar-normal"> Categorias </span>

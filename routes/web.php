@@ -17,6 +17,12 @@ Route::group([
 
     Route::resource('/usuarios', 'UsersController');
 
-    Route::resource('/categorias', 'CategoriasController');
+    Route::group([
+        'prefix' => '/cursos'
+    ], function(){
+        Route::resource('/categorias', 'CategoriasController');
+    });
+
+
 
 });

@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="791ead94-c4a5-498e-9ad8-4b19119a04c6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/Cesar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/CategoriasController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/categorias/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UsersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UsersController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/partial/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partial/footer.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/partial/menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partial/menu.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/usuarios/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/usuarios/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -176,7 +169,7 @@
       <workItem from="1568475008613" duration="94000" />
       <workItem from="1568475270047" duration="445000" />
       <workItem from="1568475759328" duration="27000" />
-      <workItem from="1568476867854" duration="4828000" />
+      <workItem from="1568476867854" duration="5719000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1568322282082</created>
@@ -192,7 +185,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568333642564</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Segundo update">
+      <created>1568481992806</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1568481992806</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
