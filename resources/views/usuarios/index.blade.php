@@ -60,7 +60,7 @@
                                                 <a href="{{ route('usuarios.edit', ['usuario' => $usuario]) }}"
                                                    class="btn btn-link btn-warning btn-just-icon edit"><i
                                                         class="material-icons">dvr</i></a>
-                                                <a href="javascript:;" onclick="" test="" class="btn btn-link btn-danger btn-just-icon remove"><i class="material-icons">close</i></a>
+                                                <button type="button" data-delete="{{ $usuario->id }}" class="btn btn-link btn-danger btn-just-icon remove"><i class="material-icons">close</i></button>
                                             </td>
                                         </tr>
                                     @endforeach
@@ -83,37 +83,54 @@
 @section('jsimport')
     <script>
         $(document).ready(function () {
-
-            function deleteData(id)
-            {
-                let url = '{{ route('usuarios.destroy', ['usuario' => $usuario]) }}';
-                url = url.replace(':id', id);
-                $("#deleteForm").attr('action', url);
-            }
-
-            function formSubmit()
-            {
-                $("#deleteForm").submit();
-            }
-
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+            });
 
             $('.remove').on('click', function (event) {
-                event.preventDefault();
                 swal({
-                    title: 'Excluir usuário ?',
-                    text: "Atenção, esta ação não poderá ser feita!",
-                    type: 'warning',
-                    showCancelButton: true,
-                    confirmButtonColor: '#3085d6',
-                    cancelButtonColor: '#d33',
-                    confirmButtonText: 'Sim, delete!',
-                    cancelButtonText: 'Cancelar',
+                    title               : 'Excluir usuário ?',
+                    text                : "Atenção, esta ação não poderá ser feita!",
+                    type                : 'warning',
+                    showCancelButton    : true,
+                    confirmButtonColor  : '#3085d6',
+                    cancelButtonColor   : '#d33',
+                    confirmButtonText   : 'Sim, delete!',
+                    cancelButtonText    : 'Cancelar',
                     reverseButtons: true,
-                }).then((result) => {
-                    if (result.value) {
-                        window.location.href = $(this).attr('href');
+                }).then((response) => {
+                    if (response) {
+                        $.ajax({
+                            url : "{{ url('usuarios')}}" + '/' + $(this).attr('data-delete'),
+                            type : "POST",
+                            data : {'_method' : 'DELETE'},
+                            success: function(){
+                                swal({
+                                        type    : 'success',
+                                        title   : "Success!",
+                                        text    : "Usuário removido com sucesso.",
+                                        icon    : "success",
+                                        timer   : '1500'
+                                    }).then(() => {
+                                    location.reload();
+                                })
+
+                            },
+                            error : function(data){
+                                swal({
+                                    title   : 'Opps...',
+                                    text    : data.message,
+                                    type    : 'error',
+                                    timer   : '1500'
+                                })
+                            }
+                        })
+                    } else {
+                        swal("Your imaginary file is safe!");
                     }
-                })
+                });
             });
         });
     </script>

@@ -68,8 +68,10 @@ class UsersController extends Controller
                 'cargo' => $request->cargo,
                 'uf' => $request->uf,
             ]);
-            $usuario->save();
-            return back()->with('success','Usuário Cadastrado com sucesso');
+            if ( $usuario->save()){
+                return back()->with('success','Usuário Cadastrado com sucesso');
+            }
+            return back()->with('error','Não foi possivel salvar o usuário.');
         } catch (\Exception $e) {
             return back()->with('error', $e->getMessage());
         }
@@ -148,6 +150,23 @@ class UsersController extends Controller
      */
     public function destroy($id)
     {
-        //
+        try{
+            $usuario = User::findOrFail($id);
+
+            if ($usuario->delete()){
+                return response()->json([
+                    'response' => 'usuario deletado com sucesso'
+                ], 200);
+            }
+
+            return response()->json([
+                'response' => 'nao foi possivel deletar este usuario.'
+            ], 404);
+
+        } catch (\Exception $e){
+            return response()->json([
+                'response' => 'error'
+            ], 400);
+        }
     }
 }

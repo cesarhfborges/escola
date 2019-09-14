@@ -55,17 +55,17 @@
                     <p> Usuários </p>
                 </a>
             </li>
-            <li class="nav-item ">
+            <li class="nav-item {{ Request::is('usuarios', 'usuarios/*') ? 'active' : '' }}">
                 <a class="nav-link" data-toggle="collapse" href="#pagesExamples">
                     <i class="material-icons">image</i>
-                    <p> Exames
+                    <p> Cursos
                         <b class="caret"></b>
                     </p>
                 </a>
                 <div class="collapse" id="pagesExamples">
                     <ul class="nav">
-                        <li class="nav-item ">
-                            <a class="nav-link" href="../examples/pages/pricing.html">
+                        <li class="nav-item {{ Request::is('usuarios/index') ? 'active' : '' }}">
+                            <a class="nav-link" href="{{ route('categorias.index') }}">
                                 <span class="sidebar-mini"> C </span>
                                 <span class="sidebar-normal"> Categorias </span>
                             </a>

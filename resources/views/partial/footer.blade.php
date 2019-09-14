@@ -4,7 +4,7 @@
             <ul>
                 <li>
                     <a href="{{ route('home') }}">
-                        Creative Tim
+                        Home
                     </a>
                 </li>
                 <li>
