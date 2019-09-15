@@ -11,11 +11,14 @@ Auth::routes();
 Route::group([
     'middleware' => 'auth'
 ], function(){
+
     Route::get('/home', 'HomeController@index')->name('home');
 
     Route::resource('/perfil', 'ProfileController');
 
     Route::resource('/usuarios', 'UsersController');
+
+    Route::post('/upload/image', 'UploadController@image')->name('image.upload');
 
     Route::group([
         'prefix' => '/cursos'

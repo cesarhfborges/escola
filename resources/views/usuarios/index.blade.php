@@ -30,6 +30,7 @@
                                 <table id="datatables" class="table table-striped table-no-bordered table-hover" cellspacing="0" width="100%" style="width:100%">
                                     <thead>
                                     <tr>
+                                        <th class="text-center">Avatar</th>
                                         <th>Nome</th>
                                         <th>Sobrenome</th>
                                         <th>E-Mail</th>
@@ -40,6 +41,7 @@
                                     </thead>
                                     <tfoot>
                                     <tr>
+                                        <th class="text-center">Avatar</th>
                                         <th>Nome</th>
                                         <th>Sobrenome</th>
                                         <th>E-Mail</th>
@@ -51,6 +53,10 @@
                                     <tbody>
                                     @foreach($usuarios as $usuario)
                                         <tr>
+                                            <td class="text-center">
+                                                {{ $usuario->avatar }}
+                                                <img src="{{ asset('assets/img/faces/marc.jpg ') }}" height="60" alt="">
+                                            </td>
                                             <td>{{ $usuario->nome }}</td>
                                             <td>{{ $usuario->sobrenome }}</td>
                                             <td>{{ $usuario->email }}</td>
@@ -92,7 +98,7 @@
             $('.remove').on('click', function (event) {
                 swal({
                     title               : 'Excluir usuário ?',
-                    text                : "Atenção, esta ação não poderá ser feita!",
+                    text                : "Atenção, esta ação não poderá ser desfeita!",
                     type                : 'warning',
                     showCancelButton    : true,
                     confirmButtonColor  : '#3085d6',

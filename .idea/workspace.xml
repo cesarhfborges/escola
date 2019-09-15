@@ -2,8 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="791ead94-c4a5-498e-9ad8-4b19119a04c6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Categoria.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/UploadController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2019_09_14_144854_create_categorias_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/seeds/CategoriasTableSeeder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/cropper/cropper.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/cropper/cropper.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/cropper/croppie.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/round-default.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/cropper/cropper.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/cropper/cropper.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/cropper/croppie.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/categorias/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/categorias/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/Cesar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/Cesar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CategoriasController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CategoriasController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/categorias/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/categorias/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/partial/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partial/footer.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/partial/menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partial/menu.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/usuarios/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/usuarios/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/usuarios/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/usuarios/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/usuarios/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/usuarios/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -169,7 +194,10 @@
       <workItem from="1568475008613" duration="94000" />
       <workItem from="1568475270047" duration="445000" />
       <workItem from="1568475759328" duration="27000" />
-      <workItem from="1568476867854" duration="5719000" />
+      <workItem from="1568476867854" duration="7683000" />
+      <workItem from="1568505167141" duration="1186000" />
+      <workItem from="1568506978346" duration="14498000" />
+      <workItem from="1568555325824" duration="10689000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1568322282082</created>
@@ -192,7 +220,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568481992806</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Segundo update">
+      <created>1568482967180</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1568482967180</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

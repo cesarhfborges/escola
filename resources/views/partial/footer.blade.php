@@ -25,11 +25,11 @@
             </ul>
         </nav>
         <div class="copyright float-right">
-            &copy;
+            Todos do direitos reservados a
+            <a href="{{ route('home') }}" target="_blank">{{ config('app.name', 'SdManager') }}</a> &copy;
             <script>
                 document.write(new Date().getFullYear())
-            </script>, made with <i class="material-icons">favorite</i> by
-            <a href="{{ route('home') }}" target="_blank">Creative Tim</a> for a better web.
+            </script>.
         </div>
     </div>
 </footer>

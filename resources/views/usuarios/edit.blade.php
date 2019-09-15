@@ -151,6 +151,7 @@
                                 </div>
                             </div>
                         </div>
+                        <a href="{{ route('usuarios.index') }}" class="btn btn-warning pull-left">Cancelar</a>
                         <button type="submit" class="btn btn-success pull-right">Salvar Alterações</button>
                         <div class="clearfix"></div>
                     </div>

@@ -51,13 +51,13 @@
             </li>
             <li class="nav-item {{ Request::is('usuarios', 'usuarios/*') ? 'active' : '' }}">
                 <a class="nav-link" href="{{ route('usuarios.index') }}">
-                    <i class="material-icons">dashboard</i>
+                    <i class="material-icons">group</i>
                     <p> Usuários </p>
                 </a>
             </li>
             <li class="nav-item {{ Request::is('cursos/*') ? 'active' : '' }}">
                 <a class="nav-link {{ Request::is('cursos/*') ? '' : 'collapsed' }}" data-toggle="collapse" href="#pagesExamples" aria-expanded="{{ Request::is('cursos/*') ? 'true' : 'false' }}">
-                    <i class="material-icons">image</i>
+                    <i class="material-icons">bookmarks</i>
                     <p> Cursos
                         <b class="caret"></b>
                     </p>
