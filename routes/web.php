@@ -24,6 +24,7 @@ Route::group([
         'prefix' => '/cursos'
     ], function(){
         Route::resource('/categorias', 'CategoriasController');
+        Route::resource('/cursos', 'CursosController');
     });
 
 

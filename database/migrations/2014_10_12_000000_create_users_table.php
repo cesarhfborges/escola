@@ -21,7 +21,7 @@ class CreateUsersTable extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->enum('tipo', ['admin', 'professor', 'estudante'])->default('estudante');
             $table->string('password');
-            $table->longText('avatar')->nullable(true);
+            $table->longText('avatar')->default('assets/img/default-avatar.png');
             $table->boolean('active')->default(false);
             $table->string('endereco')->nullable(true);
             $table->string('numero')->nullable(true);

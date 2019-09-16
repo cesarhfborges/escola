@@ -2,31 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="791ead94-c4a5-498e-9ad8-4b19119a04c6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Categoria.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/UploadController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2019_09_14_144854_create_categorias_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/seeds/CategoriasTableSeeder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/cropper/cropper.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/cropper/cropper.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/cropper/croppie.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/round-default.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/cropper/cropper.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/cropper/cropper.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/cropper/croppie.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/categorias/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/categorias/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Curso.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/ConfigController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/CursosController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2019_09_15_161045_create_cursos_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2019_09_15_200502_create_config_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/seeds/CursosTableSeeder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/mask/inputMaskPlugin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/mask/jquery.mask.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/cursos/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/cursos/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/cursos/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dictionaries/Cesar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/Cesar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Categoria.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Categoria.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CategoriasController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CategoriasController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_09_14_144854_create_categorias_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_09_14_144854_create_categorias_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/categorias/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/categorias/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/categorias/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/categorias/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/categorias/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/categorias/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/partial/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partial/footer.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/partial/menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partial/menu.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/usuarios/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/usuarios/create.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/usuarios/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/usuarios/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/usuarios/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/usuarios/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
@@ -153,11 +152,11 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\laravel\sdacademy" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\laravel\sdacademy\resources\views" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\laravel\sdacademy" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -197,7 +196,8 @@
       <workItem from="1568476867854" duration="7683000" />
       <workItem from="1568505167141" duration="1186000" />
       <workItem from="1568506978346" duration="14498000" />
-      <workItem from="1568555325824" duration="10689000" />
+      <workItem from="1568555325824" duration="23166000" />
+      <workItem from="1568650405417" duration="2165000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1568322282082</created>
@@ -227,7 +227,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568482967180</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Terceiro update">
+      <created>1568574480330</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1568574480330</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -251,6 +258,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="first commit" />
     <MESSAGE value="Segundo update" />
-    <option name="LAST_COMMIT_MESSAGE" value="Segundo update" />
+    <MESSAGE value="Terceiro update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Terceiro update" />
   </component>
 </project>

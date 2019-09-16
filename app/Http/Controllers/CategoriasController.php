@@ -104,13 +104,6 @@ class CategoriasController extends Controller
         }
 
         try{
-
-//            $categoria = new Categoria([
-//                'nome' => $request->nome,
-//                'descricao' => $request->descricao ?? null,
-//                'avatar' => $request->avatar ? ($request->avatar == 'remove' ? 'assets/img/round-default.png' : $request->avatar) : 'assets/img/round-default.png'
-//            ]);
-
             $categoria = Categoria::findOrFail($id);
             $categoria->nome = $request->nome;
             $categoria->descricao = $request->descricao;

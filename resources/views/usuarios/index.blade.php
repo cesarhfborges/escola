@@ -54,8 +54,7 @@
                                     @foreach($usuarios as $usuario)
                                         <tr>
                                             <td class="text-center">
-                                                {{ $usuario->avatar }}
-                                                <img src="{{ asset('assets/img/faces/marc.jpg ') }}" height="60" alt="">
+                                                <img src="{{ url($usuario->avatar) }}" height="60" alt="">
                                             </td>
                                             <td>{{ $usuario->nome }}</td>
                                             <td>{{ $usuario->sobrenome }}</td>
@@ -107,7 +106,7 @@
                     cancelButtonText    : 'Cancelar',
                     reverseButtons: true,
                 }).then((response) => {
-                    if (response) {
+                    if (response.value) {
                         $.ajax({
                             url : "{{ url('usuarios')}}" + '/' + $(this).attr('data-delete'),
                             type : "POST",
@@ -133,8 +132,6 @@
                                 })
                             }
                         })
-                    } else {
-                        swal("Your imaginary file is safe!");
                     }
                 });
             });

@@ -66,6 +66,8 @@
 <script src="{{ asset('assets/js/plugins/fullcalendar.min.js') }}"></script>
 <!-- Vector Map plugin, full documentation here: http://jvectormap.com/documentation/ -->
 <script src="{{ asset('assets/js/plugins/jquery-jvectormap.js') }}"></script>
+<!-- Input mask Jquery library -->
+<script src="{{ asset('assets/js/mask/jquery.mask.min.js') }}"></script>
 <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
 <script src="{{ asset('assets/js/plugins/nouislider.min.js') }}"></script>
 <!-- Include a polyfill for ES6 Promises (optional) for IE11, UC Browser and Android browser support SweetAlert -->

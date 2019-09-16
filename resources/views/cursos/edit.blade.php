@@ -18,14 +18,15 @@
                             <small class="category">Cursos</small>
                         </h4>
                     </div>
-                    <form method="post" action="{{ route('categorias.update', $categoria->id) }}">
+                    <form method="post" action="{{ route('cursos.update', $data['curso']->id) }}">
                         @csrf
                         @method('PATCH')
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-md-4">
+
                                     <div class="col-12 m-0 p-0" id="image">
-                                        <img src="{{ url($categoria->avatar) }}" id="avatarImage" class="rounded mx-auto d-block img-fluid" alt="...">
+                                        <img src="{{ url($data['curso']->avatar) }}" id="avatarImage" class="rounded mx-auto d-block img-fluid" alt="...">
                                         <div class="row pl-3 pr-3">
                                             <button type="button" id="remove" class="btn btn-danger col">Remover</button>
                                             <button type="button" id="change" class="btn btn-info col">Alterar</button>
@@ -44,24 +45,51 @@
                                     <input type="file" class="col-12 mt-5 d-none" accept="image/*" id="strPhoto">
                                 </div>
                                 <div class="col-md-8">
-                                    <div class="col-md-12">
-                                        <div class="form-group">
-                                            <label class="bmd-label-static">Nome</label>
-                                            <input type="text" class="form-control" name="nome" value="{{ $categoria->nome }}">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label class="bmd-label-static">Nome</label>
+                                                <input type="text" class="form-control" name="nome" value="{{ $data['curso']->nome }}">
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="col-md-12">
-                                        <div class="form-group">
-                                            <label class="bmd-label-static">Descrição</label>
-                                            <textarea class="form-control" rows="5" name="descricao">{{ $categoria->descricao }}</textarea>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label class="bmd-label-static">Categoria</label>
+                                                <select class="selectpicker" name="categoria" data-live-search="true" data-style="btn-primary select-with-transition form-control col-12" data-size="7">
+                                                    @foreach($data['categorias'] as $categoria)
+                                                        <option value="{{ $categoria->id }}" @if($data['curso']->categoria_id == $categoria->id) selected @endif>{{ $categoria->nome }}</option>
+                                                    @endforeach
+                                                </select>
+                                            </div>
                                         </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label class="bmd-label-static">Categoria</label>
+                                                <select class="selectpicker" name="custo" id="custo" data-live-search="true" data-style="btn-primary select-with-transition form-control col-12" data-size="7">
+                                                    <option value="pago" @if($data['curso']->custo == 'pago') selected @endif>Pago</option>
+                                                    <option value="gratis" @if($data['curso']->custo == 'gratis') selected @endif>Gratis</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label class="bmd-label-static">Valor</label>
+                                                <input type="text" class="form-control money" name="valor" id="valor" value="{{ $data['curso']->preco }}">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label class="bmd-label-static">Descrição</label>
+                                                <textarea class="form-control" rows="5" name="descricao">{{ $data['curso']->descricao }}</textarea>
+                                            </div>
+                                        </div>
+                                        <input type="text" class="d-none" value="" id="avatar" name="avatar">
                                     </div>
-                                    <input type="text" class="d-none" value="{{ $categoria->avatar }}" id="avatar" name="avatar">
                                 </div>
                             </div>
                         </div>
                         <div class="card-footer">
-                            <a href="{{ route('categorias.index') }}" class="btn btn-warning pull-left">Cancelar</a>
+                            <a href="{{ route('cursos.index') }}" class="btn btn-warning pull-left">Cancelar</a>
                             <button type="submit" class="btn btn-success pull-right">Salvar Alterações</button>
                         </div>
                     </form>
@@ -73,6 +101,7 @@
 
 @section('jsimport')
     <script src="{{ asset('assets/js/cropper/croppie.js') }}"></script>
+    <script src="{{ asset('assets/js/mask/inputMaskPlugin.js') }}"></script>
     <script type="text/javascript">
 
         $(document).ready(function () {

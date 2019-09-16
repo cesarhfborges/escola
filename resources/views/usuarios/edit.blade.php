@@ -162,7 +162,7 @@
                     <div class="card-avatar">
                         <img id="avatarProfile" height="130" width="130" class="img"
                              style="cursor: pointer; max-height: 130px !important; max-width: 130px !important; height: 130px !important; width: 130px !important;"
-                             src="@if($usuario->avatar) {{ asset('storage/'.$usuario->avatar) }}@else {{ asset('assets/img/faces/marc.jpg') }} @endif"/>
+                             src="@if($usuario->avatar) {{ url($usuario->avatar) }}@else {{ asset('assets/img/faces/marc.jpg') }} @endif"/>
                     </div>
                     <div class="card-body">
                         <input type="file" id="uploadAvatar" onchange="showMyImage(this)" name="avatar" class="form-control"

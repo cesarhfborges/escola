@@ -15,7 +15,7 @@
     <div class="sidebar-wrapper">
         <div class="user">
             <div class="photo">
-                <img src="@if (file_exists(Auth::user()->avatar)) {{ Auth::user()->avatar }} @else {{ asset('assets/img/faces/marc.jpg') }} @endif" />
+                <img src="@if (file_exists(Auth::user()->avatar)) {{ url(Auth::user()->avatar) }} @else {{ asset('assets/img/faces/marc.jpg') }} @endif" />
             </div>
             <div class="user-info">
                 <a data-toggle="collapse" href="#collapseExample" class="username">
@@ -66,19 +66,19 @@
                     <ul class="nav ">
                         <li class="nav-item {{ Request::is('cursos/categorias', 'cursos/categorias/*') ? 'active' : '' }}">
                             <a class="nav-link" href="{{ route('categorias.index') }}">
-                                <span class="sidebar-mini"> C </span>
+                                <span class="sidebar-mini"> CT </span>
                                 <span class="sidebar-normal"> Categorias </span>
                             </a>
                         </li>
-                        <li class="nav-item ">
-                            <a class="nav-link" href="../examples/pages/rtl.html">
-                                <span class="sidebar-mini"> BP </span>
-                                <span class="sidebar-normal"> Bancos de Perguntas </span>
+                        <li class="nav-item {{ Request::is('cursos/cursos', 'cursos/cursos/*') ? 'active' : '' }}">
+                            <a class="nav-link" href="{{ route('cursos.index') }}">
+                                <span class="sidebar-mini"> CS </span>
+                                <span class="sidebar-normal"> Cursos </span>
                             </a>
                         </li>
                         <li class="nav-item ">
                             <a class="nav-link" href="../examples/pages/timeline.html">
-                                <span class="sidebar-mini"> Q </span>
+                                <span class="sidebar-mini"> QT </span>
                                 <span class="sidebar-normal"> Questionário </span>
                             </a>
                         </li>
@@ -273,8 +273,8 @@
             </li>
             <li class="nav-item ">
                 <a class="nav-link" href="../examples/calendar.html">
-                    <i class="material-icons">date_range</i>
-                    <p> Calendar </p>
+                    <i class="material-icons">build</i>
+                    <p> Configurações </p>
                 </a>
             </li>
         </ul>

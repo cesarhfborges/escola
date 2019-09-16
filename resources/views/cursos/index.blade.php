@@ -11,11 +11,11 @@
                         </div>
                         <div class="row">
                             <div class="col-6">
-                                <h4 class="card-title">Categorias</h4>
+                                <h4 class="card-title">Cursos</h4>
                             </div>
                             <div class="col-6">
                                 <a class="btn btn-success float-right"
-                                   href="{{ route('categorias.create') }}">Adicionar</a>
+                                   href="{{ route('cursos.create') }}">Adicionar</a>
                             </div>
                         </div>
                     </div>
@@ -30,33 +30,44 @@
                                 <table id="datatables" class="table table-striped table-no-bordered table-hover" cellspacing="0" width="100%" style="width:100%">
                                     <thead>
                                     <tr>
-                                        <th class="text-center">Avatar</th>
-                                        <th>Nome</th>
-                                        <th>Descrição</th>
-                                        <th class="disabled-sorting text-right">Opções</th>
+                                        <th class="text-center" style="width: 10%;">Avatar</th>
+                                        <th style="width: 20%;">Nome</th>
+                                        <th style="width: 20%;">Categoria</th>
+                                        <th class="text-center" style="width: 10%;">Custo</th>
+                                        <th class="text-center" style="width: 10%;">Preço</th>
+                                        <th class="disabled-sorting text-center" style="width: 30%;">Opções</th>
                                     </tr>
                                     </thead>
                                     <tfoot>
                                     <tr>
                                         <th class="text-center">Avatar</th>
                                         <th>Nome</th>
-                                        <th>Descrição</th>
-                                        <th class="text-right">Opções</th>
+                                        <th>Categoria</th>
+                                        <th class="text-center">Custo</th>
+                                        <th class="text-center">Preço</th>
+                                        <th class="text-center">Opções</th>
                                     </tr>
                                     </tfoot>
                                     <tbody>
-                                    @foreach($categorias as $categoria)
+                                    @foreach($cursos as $curso)
                                         <tr>
                                             <td class="text-center">
-                                                <img src="{{ url($categoria->avatar) }}" height="60" alt="">
+                                                <img src="{{ url($curso->avatar) }}" height="60" alt="">
                                             </td>
-                                            <td>{{ $categoria->nome }}</td>
-                                            <td>{{ $categoria->descricao }}</td>
+                                            <td>{{ $curso->nome }}</td>
+                                            <td>{{ $curso->categoria->nome }}</td>
+                                            <td class="text-center">{{ $curso->custo }}</td>
+                                            <td class="text-center">R$ {{ number_format($curso->preco, 2, ',', '.') }}</td>
                                             <td class="text-right">
-                                                <a href="{{ route('categorias.edit', ['categoria' => $categoria]) }}"
-                                                   class="btn btn-link btn-warning btn-just-icon edit"><i
-                                                        class="material-icons">dvr</i></a>
-                                                <button type="button" data-delete="{{ $categoria->id }}" class="btn btn-link btn-danger btn-just-icon remove"><i class="material-icons">close</i></button>
+                                                <a href="{{ route('cursos.edit', ['curso' => $curso]) }}" class="btn btn-link btn-warning">
+                                                    <i class="material-icons">format_align_justify</i> Turmas
+                                                </a>
+                                                <a href="{{ route('cursos.edit', ['curso' => $curso]) }}" class="btn btn-link btn-warning edit">
+                                                    <i class="material-icons">dvr</i> Editar
+                                                </a>
+                                                <button type="button" data-delete="{{ $curso->id }}" class="btn btn-link btn-danger remove">
+                                                    <i class="material-icons">close</i> Excluir
+                                                </button>
                                             </td>
                                         </tr>
                                     @endforeach
@@ -87,7 +98,7 @@
 
             $('.remove').on('click', function (event) {
                 swal({
-                    title               : 'Excluir categoria ?',
+                    title               : 'Excluir usuário ?',
                     text                : "Atenção, esta ação não poderá ser desfeita!",
                     type                : 'warning',
                     showCancelButton    : true,
@@ -97,16 +108,16 @@
                     cancelButtonText    : 'Cancelar',
                     reverseButtons: true,
                 }).then((response) => {
-                    if (response.value) {
+                    if (response) {
                         $.ajax({
-                            url : "{{ url('cursos/categorias')}}" + '/' + $(this).attr('data-delete'),
+                            url : "{{ url('cursos')}}" + '/' + $(this).attr('data-delete'),
                             type : "POST",
                             data : {'_method' : 'DELETE'},
                             success: function(){
                                 swal({
                                     type    : 'success',
                                     title   : "Success!",
-                                    text    : "Categoria removida com sucesso.",
+                                    text    : "Usuário removido com sucesso.",
                                     icon    : "success",
                                     timer   : '1500'
                                 }).then(() => {
@@ -123,6 +134,8 @@
                                 })
                             }
                         })
+                    } else {
+                        swal("Your imaginary file is safe!");
                     }
                 });
             });

@@ -99,7 +99,7 @@
 
             $('#remove').on('click', function () {
                 $('#avatarImage').attr('src', '{{ asset('assets/img/round-default.png') }}');
-                $('#avatar').val('remove');
+                $('#avatar').val('assets/img/round-default.png');
             });
 
             $('#change').on('click', function(){

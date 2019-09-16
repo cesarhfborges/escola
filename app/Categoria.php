@@ -47,4 +47,9 @@ class Categoria extends Model
             'file_input' => 'avatar'
         ]
     ];
+
+    public function curso()
+    {
+        return $this->hasMany(Categoria::class, 'empresa_id', 'id');
+    }
 }
