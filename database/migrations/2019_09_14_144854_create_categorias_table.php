@@ -21,7 +21,7 @@ class CreateCategoriasTable extends Migration
             $table->bigIncrements('id');
             $table->string('nome')->nullable(false);
             $table->string('avatar')->default('assets/img/round-default.png');
-            $table->string('descricao')->nullable(true);
+            $table->longText('descricao')->nullable(true);
             $table->softDeletes();
             $table->timestamps();
         });

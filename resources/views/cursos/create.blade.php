@@ -18,7 +18,7 @@
                             <small class="category">Cursos</small>
                         </h4>
                     </div>
-                    <form method="post" action="{{ route('categorias.store') }}">
+                    <form method="post" action="{{ route('cursos.store') }}">
                         @csrf
                         @method('POST')
                         <div class="card-body">
@@ -78,11 +78,12 @@
                                             </div>
                                         </div>
                                         <div class="col-md-12">
-                                            <div class="form-group">
-                                                <label class="bmd-label-static">Descrição</label>
-                                                <textarea class="form-control" rows="5" name="descricao"></textarea>
+                                            <div class="col-12 m-0 p-0">
+                                                <label>Descrição</label>
+                                                <div id="quill-editor"></div>
                                             </div>
                                         </div>
+                                        <textarea class="d-none" rows="5" name="descricao" id="descricao"></textarea>
                                         <input type="text" class="d-none" value="" id="avatar" name="avatar">
                                     </div>
                                 </div>
@@ -105,6 +106,49 @@
     <script type="text/javascript">
 
         $(document).ready(function () {
+
+            let toolbarOptions = {
+                container: [
+                    [{ 'font': [] }],
+                    [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
+                    ['bold', 'italic', 'underline', 'strike'],
+                    ['blockquote', 'code-block'],
+                    [{ 'list': 'ordered' }, { 'list': 'bullet' }],
+                    [{ 'script': 'sub' }, { 'script': 'super' }],
+                    [{ 'indent': '-1' }, { 'indent': '+1' }],
+                    [{ 'color': [] }, { 'background': [] }],
+                    [{ 'align': [] }],
+                    // ['link', 'image', 'video'],
+                    ['emoji'],
+                    ['clean'],
+                ],
+                handlers: {
+                    'emoji': function () {}
+                }
+            };
+            let quill = new Quill('#quill-editor', {
+                modules: {
+                    "toolbar": toolbarOptions,
+                    "emoji-toolbar": true,
+                    "emoji-shortname": true,
+                    "emoji-textarea": false,
+                    history: {
+                        delay: 2000,
+                        maxStack: 500,
+                        userOnly: true
+                    },
+                },
+                placeholder: 'Descrição',
+                theme: 'snow',
+            });
+
+
+            quill.root.innerHTML = $('#descricao').val();
+
+            quill.on('text-change', function(delta, oldDelta, source) {
+                $('#descricao').val(quill.root.innerHTML);
+                // $(this).height(self.editor.root.ownerDocument.body.scrollHeight);
+            });
 
             $.ajaxSetup({
                 headers: {

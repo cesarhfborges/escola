@@ -16,19 +16,19 @@ class CreateConfigTable extends Migration
         Schema::create('config', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('nome_site');
-            $table->string('avatar');
-            $table->string('favicon');
-            $table->string('endereco');
+            $table->longText('avatar');
+            $table->longText('favicon');
+            $table->longText('endereco');
+            $table->string('bairro');
             $table->string('cidade');
-            $table->string('estado');
-            $table->string('uf');
-            $table->string('cep');
-            $table->string('rodape');
+            $table->string('uf', 2);
+            $table->string('cep', 16);
+            $table->longText('rodape');
             $table->string('horario_sistema');
-            $table->string('monetario');
+            $table->string('monetario', 6);
             $table->boolean('smtp_ativo')->default(true);
             $table->string('smtp_host');
-            $table->string('smtp_porta');
+            $table->integer('smtp_porta');
             $table->string('smtp_email');
             $table->string('smtp_senha');
             $table->string('smtp_cripto');

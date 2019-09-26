@@ -15,9 +15,15 @@
     <!--     Fonts and icons     -->
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+{{--    <link rel="stylesheet" href="{{ asset('assets/css/font-awesome.min.css') }}">--}}
     <!-- CSS Files -->
     <link href="{{ asset('assets/css/material-dashboard.css?v=2.1.0') }}" rel="stylesheet" />
     <!-- CSS Just for demo purpose, don't include it in your project -->
+
+    <!-- Quill Js -->
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/quill/quill.snow.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/quill/dist/quill-emoji.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/quill/quill-autoresize.css') }}">
 
     @yield('cssimport')
 
@@ -56,6 +62,7 @@
 <script src="{{ asset('assets/js/plugins/bootstrap-selectpicker.js') }}"></script>
 <!--  Plugin for the DateTimePicker, full documentation here: https://eonasdan.github.io/bootstrap-datetimepicker/ -->
 <script src="{{ asset('assets/js/plugins/bootstrap-datetimepicker.min.js') }}"></script>
+<script src="{{ asset('assets/js/plugins/datetimepicker-pt-br.js') }}"></script>
 <!--  DataTables.net Plugin, full documentation here: https://datatables.net/  -->
 <script src="{{ asset('assets/js/plugins/jquery.dataTables.min.js') }}"></script>
 <!--	Plugin for Tags, full documentation here: https://github.com/bootstrap-tagsinput/bootstrap-tagsinputs  -->
@@ -71,7 +78,7 @@
 <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
 <script src="{{ asset('assets/js/plugins/nouislider.min.js') }}"></script>
 <!-- Include a polyfill for ES6 Promises (optional) for IE11, UC Browser and Android browser support SweetAlert -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
+<script src="{{ asset('assets/js/plugins/core-js-241.js') }}"></script>
 <!-- Library for adding dinamically elements -->
 <script src="{{ asset('assets/js/plugins/arrive.min.js') }}"></script>
 <!--  Google Maps Plugin    -->
@@ -82,6 +89,12 @@
 <script src="{{ asset('assets/js/plugins/bootstrap-notify.js') }}"></script>
 <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
 <script src="{{ asset('assets/js/material-dashboard.js?v=2.1.0') }}" type="text/javascript"></script>
+
+<!-- Quill Js -->
+<script src="{{ asset('assets/quill/quill.min.js') }}"></script>
+<script src="{{ asset('assets/quill/dist/quill-emoji.js') }}"></script>
+<script src="{{ asset('assets/quill/image-resize.min.js') }}"></script>
+
 
 @yield('jsimport')
 

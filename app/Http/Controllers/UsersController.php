@@ -57,7 +57,7 @@ class UsersController extends Controller
                 'sobrenome' => $request->nome,
                 'tipo' => $request->tipo,
                 'email' => $request->email,
-                'password' => $request->password,
+                'password' => bcrypt($request->password),
                 'active' => false,
                 'endereco' => $request->endereco,
                 'numero' => $request->numero,
@@ -67,6 +67,7 @@ class UsersController extends Controller
                 'empresa' => $request->empresa,
                 'cargo' => $request->cargo,
                 'uf' => $request->uf,
+                'avatar' => $request->avatar,
             ]);
             if ( $usuario->save()){
                 return back()->with('success','Usuário Cadastrado com sucesso');
@@ -126,14 +127,16 @@ class UsersController extends Controller
             $usuario->empresa = $request->empresa;
             $usuario->cargo = $request->cargo;
             $usuario->email = $request->email ?? $usuario->email;
-            $usuario->password = $request->password ?? $usuario->password;
+            $usuario->password = $request->password ? (strlen($request->password) > 0 ? bcrypt($usuario->password) : $usuario->password ) : $usuario->password;
             $usuario->endereco = $request->endereco;
             $usuario->numero = $request->numero;
             $usuario->bairro = $request->bairro;
             $usuario->cidade = $request->cidade;
             $usuario->uf = $request->uf;
             $usuario->complemento = $request->complemento;
-            $request->file('avatar') ? $usuario->uploadImage($request->file('avatar'), 'avatar') : null;
+            $usuario->avatar = $request->avatar;
+            $usuario->tipo = $request->tipo;
+//            $request->file('avatar') ? $usuario->uploadImage($request->file('avatar'), 'avatar') : null;
             $usuario->save();
     //        Flash::message('Your account has been updated!');
             return back()->with('success','Perfil Atualizado com Sucesso');

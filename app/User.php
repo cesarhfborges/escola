@@ -31,6 +31,7 @@ class User extends Authenticatable
         'uf',
         'empresa',
         'cargo',
+        'tipo',
     ];
 
     /**

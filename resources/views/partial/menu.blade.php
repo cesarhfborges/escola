@@ -12,7 +12,7 @@
             {{ config('app.name', 'SdManager') }}
         </a>
     </div>
-    <div class="sidebar-wrapper">
+    <div class="sidebar-wrapper" style="overflow: hidden;">
         <div class="user">
             <div class="photo">
                 <img src="@if (file_exists(Auth::user()->avatar)) {{ url(Auth::user()->avatar) }} @else {{ asset('assets/img/faces/marc.jpg') }} @endif" />
@@ -35,7 +35,7 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#">
                                 <span class="sidebar-mini"> S </span>
-                                <span class="sidebar-normal"> Settings </span>
+                                <span class="sidebar-normal"> Configurações </span>
                             </a>
                         </li>
                     </ul>
@@ -70,24 +70,24 @@
                                 <span class="sidebar-normal"> Categorias </span>
                             </a>
                         </li>
-                        <li class="nav-item {{ Request::is('cursos/cursos', 'cursos/cursos/*') ? 'active' : '' }}">
+                        <li class="nav-item {{ Request::is('cursos/cursos', 'cursos/cursos/*', 'cursos/turmas/*') ? 'active' : '' }}">
                             <a class="nav-link" href="{{ route('cursos.index') }}">
                                 <span class="sidebar-mini"> CS </span>
                                 <span class="sidebar-normal"> Cursos </span>
                             </a>
                         </li>
-                        <li class="nav-item ">
-                            <a class="nav-link" href="../examples/pages/timeline.html">
-                                <span class="sidebar-mini"> QT </span>
-                                <span class="sidebar-normal"> Questionário </span>
-                            </a>
-                        </li>
-                        <li class="nav-item ">
-                            <a class="nav-link" href="../examples/pages/login.html">
-                                <span class="sidebar-mini"> TT </span>
-                                <span class="sidebar-normal"> Tipos de Teste </span>
-                            </a>
-                        </li>
+{{--                        <li class="nav-item ">--}}
+{{--                            <a class="nav-link" href="../examples/pages/timeline.html">--}}
+{{--                                <span class="sidebar-mini"> QT </span>--}}
+{{--                                <span class="sidebar-normal"> Questionário </span>--}}
+{{--                            </a>--}}
+{{--                        </li>--}}
+{{--                        <li class="nav-item ">--}}
+{{--                            <a class="nav-link" href="../examples/pages/login.html">--}}
+{{--                                <span class="sidebar-mini"> TT </span>--}}
+{{--                                <span class="sidebar-normal"> Tipos de Teste </span>--}}
+{{--                            </a>--}}
+{{--                        </li>--}}
                     </ul>
                 </div>
             </li>

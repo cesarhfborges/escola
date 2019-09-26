@@ -30,12 +30,12 @@
                                 <table id="datatables" class="table table-striped table-no-bordered table-hover" cellspacing="0" width="100%" style="width:100%">
                                     <thead>
                                     <tr>
-                                        <th class="text-center" style="width: 10%;">Avatar</th>
-                                        <th style="width: 20%;">Nome</th>
-                                        <th style="width: 20%;">Categoria</th>
-                                        <th class="text-center" style="width: 10%;">Custo</th>
-                                        <th class="text-center" style="width: 10%;">Preço</th>
-                                        <th class="disabled-sorting text-center" style="width: 30%;">Opções</th>
+                                        <th class="text-center">Avatar</th>
+                                        <th>Nome</th>
+                                        <th>Categoria</th>
+                                        <th class="text-center">Custo</th>
+                                        <th class="text-center">Preço</th>
+                                        <th class="disabled-sorting text-center">Opções</th>
                                     </tr>
                                     </thead>
                                     <tfoot>
@@ -59,8 +59,11 @@
                                             <td class="text-center">{{ $curso->custo }}</td>
                                             <td class="text-center">R$ {{ number_format($curso->preco, 2, ',', '.') }}</td>
                                             <td class="text-right">
-                                                <a href="{{ route('cursos.edit', ['curso' => $curso]) }}" class="btn btn-link btn-warning">
+                                                <a href="{{ route('turmas.index', ['curso' => $curso]) }}" class="btn btn-link btn-warning">
                                                     <i class="material-icons">format_align_justify</i> Turmas
+                                                </a>
+                                                <a href="{{ route('cursos.edit', ['curso' => $curso]) }}" class="btn btn-link btn-warning">
+                                                    <i class="material-icons">inbox</i> Conteudo
                                                 </a>
                                                 <a href="{{ route('cursos.edit', ['curso' => $curso]) }}" class="btn btn-link btn-warning edit">
                                                     <i class="material-icons">dvr</i> Editar

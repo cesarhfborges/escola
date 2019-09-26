@@ -91,6 +91,10 @@ class CursosController extends Controller
             $curso->categoria_id = $request->categoria;
             $curso->custo = $request->custo;
             $curso->preco = (double)str_replace(',', '.', str_replace('.', '', $request->valor));
+            $curso->margem = $request->margem;
+            $curso->arredondar = $request->arredondar;
+            $curso->configuracao = $request->configuracao;
+            $curso->sessao = $request->sessao;
             $curso->descricao = $request->descricao;
             $curso->avatar = strlen($request->avatar) > 0 ? $request->avatar : $curso->avatar ;
             $curso->save();

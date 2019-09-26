@@ -10,13 +10,15 @@ class Curso extends Model
 {
     use SoftDeletes, HasImageUploads;
 
-
-
     protected $fillable = [
         'nome',
         'categoria_id',
         'custo',
         'preco',
+        'margem',
+        'arredondar',
+        'configuracao',
+        'sessao',
         'avatar',
         'descricao'
     ];

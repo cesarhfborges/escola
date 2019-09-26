@@ -2,32 +2,494 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="791ead94-c4a5-498e-9ad8-4b19119a04c6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Curso.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/ConfigController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/CursosController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2019_09_15_161045_create_cursos_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2019_09_15_200502_create_config_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/seeds/CursosTableSeeder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/mask/inputMaskPlugin.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/mask/jquery.mask.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/cursos/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/cursos/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/cursos/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Config.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Conteudo.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Exame.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/ConteudoController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/TurmasController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Turma.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/activitylog.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2019_09_20_151508_create_turmas_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2019_09_20_152600_create_exames_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2019_09_20_152616_create_conteudos_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2019_09_20_154253_create_exame_itens_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2019_09_22_101420_create_activity_log_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/seeds/ConteudosSeeder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/seeds/ExamesSeeder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/seeds/TurmasSeeder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/font-awesome.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/attachment.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/plugins/core-js-241.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/plugins/datetimepicker-pt-br.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/plugins/fullcalendar-pt-br.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/plugins/pt-br.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/build/pdf.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/build/pdf.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/build/pdf.worker.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/build/pdf.worker.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/78-EUC-H.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/78-EUC-V.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/78-H.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/78-RKSJ-H.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/78-RKSJ-V.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/78-V.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/78ms-RKSJ-H.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/78ms-RKSJ-V.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/83pv-RKSJ-H.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/90ms-RKSJ-H.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/90ms-RKSJ-V.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/90msp-RKSJ-H.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/90msp-RKSJ-V.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/90pv-RKSJ-H.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/90pv-RKSJ-V.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/Add-H.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/Add-RKSJ-H.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/Add-RKSJ-V.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/Add-V.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/Adobe-CNS1-0.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/Adobe-CNS1-1.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/Adobe-CNS1-2.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/Adobe-CNS1-3.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/Adobe-CNS1-4.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/Adobe-CNS1-5.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/Adobe-CNS1-6.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/Adobe-CNS1-UCS2.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/Adobe-GB1-0.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/Adobe-GB1-1.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/Adobe-GB1-2.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/Adobe-GB1-3.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/Adobe-GB1-4.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/Adobe-GB1-5.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/Adobe-GB1-UCS2.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/Adobe-Japan1-0.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/Adobe-Japan1-1.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/Adobe-Japan1-2.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/Adobe-Japan1-3.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/Adobe-Japan1-4.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/Adobe-Japan1-5.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/Adobe-Japan1-6.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/Adobe-Japan1-UCS2.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/Adobe-Korea1-0.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/Adobe-Korea1-1.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/Adobe-Korea1-2.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/Adobe-Korea1-UCS2.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/B5-H.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/B5-V.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/B5pc-H.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/B5pc-V.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/CNS-EUC-H.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/CNS-EUC-V.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/CNS1-H.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/CNS1-V.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/CNS2-H.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/CNS2-V.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/ETHK-B5-H.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/ETHK-B5-V.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/ETen-B5-H.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/ETen-B5-V.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/ETenms-B5-H.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/ETenms-B5-V.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/EUC-H.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/EUC-V.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/Ext-H.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/Ext-RKSJ-H.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/Ext-RKSJ-V.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/Ext-V.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/GB-EUC-H.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/GB-EUC-V.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/GB-H.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/GB-V.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/GBK-EUC-H.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/GBK-EUC-V.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/GBK2K-H.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/GBK2K-V.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/GBKp-EUC-H.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/GBKp-EUC-V.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/GBT-EUC-H.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/GBT-EUC-V.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/GBT-H.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/GBT-V.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/GBTpc-EUC-H.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/GBTpc-EUC-V.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/GBpc-EUC-H.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/GBpc-EUC-V.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/H.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/HKdla-B5-H.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/HKdla-B5-V.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/HKdlb-B5-H.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/HKdlb-B5-V.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/HKgccs-B5-H.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/HKgccs-B5-V.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/HKm314-B5-H.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/HKm314-B5-V.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/HKm471-B5-H.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/HKm471-B5-V.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/HKscs-B5-H.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/HKscs-B5-V.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/Hankaku.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/Hiragana.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/KSC-EUC-H.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/KSC-EUC-V.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/KSC-H.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/KSC-Johab-H.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/KSC-Johab-V.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/KSC-V.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/KSCms-UHC-H.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/KSCms-UHC-HW-H.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/KSCms-UHC-HW-V.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/KSCms-UHC-V.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/KSCpc-EUC-H.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/KSCpc-EUC-V.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/Katakana.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/NWP-H.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/NWP-V.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/RKSJ-H.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/RKSJ-V.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/Roman.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/UniCNS-UCS2-H.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/UniCNS-UCS2-V.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/UniCNS-UTF16-H.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/UniCNS-UTF16-V.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/UniCNS-UTF32-H.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/UniCNS-UTF32-V.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/UniCNS-UTF8-H.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/UniCNS-UTF8-V.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/UniGB-UCS2-H.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/UniGB-UCS2-V.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/UniGB-UTF16-H.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/UniGB-UTF16-V.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/UniGB-UTF32-H.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/UniGB-UTF32-V.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/UniGB-UTF8-H.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/UniGB-UTF8-V.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/UniJIS-UCS2-H.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/UniJIS-UCS2-HW-H.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/UniJIS-UCS2-HW-V.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/UniJIS-UCS2-V.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/UniJIS-UTF16-H.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/UniJIS-UTF16-V.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/UniJIS-UTF32-H.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/UniJIS-UTF32-V.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/UniJIS-UTF8-H.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/UniJIS-UTF8-V.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/UniJIS2004-UTF16-H.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/UniJIS2004-UTF16-V.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/UniJIS2004-UTF32-H.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/UniJIS2004-UTF32-V.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/UniJIS2004-UTF8-H.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/UniJIS2004-UTF8-V.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/UniJISPro-UCS2-HW-V.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/UniJISPro-UCS2-V.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/UniJISPro-UTF8-V.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/UniJISX0213-UTF32-H.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/UniJISX0213-UTF32-V.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/UniJISX02132004-UTF32-H.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/UniJISX02132004-UTF32-V.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/UniKS-UCS2-H.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/UniKS-UCS2-V.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/UniKS-UTF16-H.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/UniKS-UTF16-V.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/UniKS-UTF32-H.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/UniKS-UTF32-V.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/UniKS-UTF8-H.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/UniKS-UTF8-V.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/V.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/cmaps/WP-Symbol.bcmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/compressed.tracemonkey-pldi-09.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/debugger.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/images/annotation-check.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/images/annotation-comment.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/images/annotation-help.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/images/annotation-insert.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/images/annotation-key.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/images/annotation-newparagraph.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/images/annotation-noicon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/images/annotation-note.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/images/annotation-paragraph.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/images/findbarButton-next-rtl.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/images/findbarButton-next-rtl@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/images/findbarButton-next.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/images/findbarButton-next@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/images/findbarButton-previous-rtl.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/images/findbarButton-previous-rtl@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/images/findbarButton-previous.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/images/findbarButton-previous@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/images/grab.cur" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/images/grabbing.cur" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/images/loading-icon.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/images/loading-small.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/images/loading-small@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/images/secondaryToolbarButton-documentProperties.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/images/secondaryToolbarButton-documentProperties@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/images/secondaryToolbarButton-firstPage.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/images/secondaryToolbarButton-firstPage@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/images/secondaryToolbarButton-handTool.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/images/secondaryToolbarButton-handTool@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/images/secondaryToolbarButton-lastPage.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/images/secondaryToolbarButton-lastPage@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/images/secondaryToolbarButton-rotateCcw.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/images/secondaryToolbarButton-rotateCcw@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/images/secondaryToolbarButton-rotateCw.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/images/secondaryToolbarButton-rotateCw@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/images/secondaryToolbarButton-scrollHorizontal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/images/secondaryToolbarButton-scrollHorizontal@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/images/secondaryToolbarButton-scrollVertical.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/images/secondaryToolbarButton-scrollVertical@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/images/secondaryToolbarButton-scrollWrapped.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/images/secondaryToolbarButton-scrollWrapped@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/images/secondaryToolbarButton-selectTool.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/images/secondaryToolbarButton-selectTool@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/images/secondaryToolbarButton-spreadEven.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/images/secondaryToolbarButton-spreadEven@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/images/secondaryToolbarButton-spreadNone.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/images/secondaryToolbarButton-spreadNone@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/images/secondaryToolbarButton-spreadOdd.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/images/secondaryToolbarButton-spreadOdd@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/images/shadow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/images/texture.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/images/toolbarButton-bookmark.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/images/toolbarButton-bookmark@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/images/toolbarButton-download.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/images/toolbarButton-download@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/images/toolbarButton-menuArrows.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/images/toolbarButton-menuArrows@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/images/toolbarButton-openFile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/images/toolbarButton-openFile@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/images/toolbarButton-pageDown-rtl.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/images/toolbarButton-pageDown-rtl@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/images/toolbarButton-pageDown.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/images/toolbarButton-pageDown@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/images/toolbarButton-pageUp-rtl.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/images/toolbarButton-pageUp-rtl@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/images/toolbarButton-pageUp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/images/toolbarButton-pageUp@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/images/toolbarButton-presentationMode.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/images/toolbarButton-presentationMode@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/images/toolbarButton-print.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/images/toolbarButton-print@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/images/toolbarButton-search.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/images/toolbarButton-search@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/images/toolbarButton-secondaryToolbarToggle-rtl.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/images/toolbarButton-secondaryToolbarToggle-rtl@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/images/toolbarButton-secondaryToolbarToggle.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/images/toolbarButton-secondaryToolbarToggle@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/images/toolbarButton-sidebarToggle-rtl.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/images/toolbarButton-sidebarToggle-rtl@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/images/toolbarButton-sidebarToggle.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/images/toolbarButton-sidebarToggle@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/images/toolbarButton-viewAttachments.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/images/toolbarButton-viewAttachments@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/images/toolbarButton-viewOutline-rtl.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/images/toolbarButton-viewOutline-rtl@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/images/toolbarButton-viewOutline.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/images/toolbarButton-viewOutline@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/images/toolbarButton-viewThumbnail.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/images/toolbarButton-viewThumbnail@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/images/toolbarButton-zoomIn.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/images/toolbarButton-zoomIn@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/images/toolbarButton-zoomOut.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/images/toolbarButton-zoomOut@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/images/treeitem-collapsed-rtl.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/images/treeitem-collapsed-rtl@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/images/treeitem-collapsed.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/images/treeitem-collapsed@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/images/treeitem-expanded.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/images/treeitem-expanded@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/ach/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/af/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/ak/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/an/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/ar/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/as/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/ast/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/az/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/be/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/bg/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/bn-BD/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/bn-IN/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/br/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/brx/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/bs/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/ca/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/cak/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/crh/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/cs/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/csb/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/cy/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/da/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/de/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/el/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/en-CA/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/en-GB/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/en-US/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/en-ZA/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/eo/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/es-AR/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/es-CL/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/es-ES/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/es-MX/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/et/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/eu/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/fa/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/ff/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/fi/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/fr/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/fy-NL/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/ga-IE/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/gd/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/gl/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/gn/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/gu-IN/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/he/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/hi-IN/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/hr/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/hsb/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/hto/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/hu/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/hy-AM/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/ia/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/id/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/is/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/it/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/ja/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/ka/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/kab/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/kk/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/km/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/kn/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/ko/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/kok/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/ks/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/ku/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/lg/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/lij/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/lo/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/locale.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/lt/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/ltg/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/lv/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/mai/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/meh/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/mk/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/ml/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/mn/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/mr/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/ms/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/my/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/nb-NO/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/ne-NP/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/nl/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/nn-NO/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/nso/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/oc/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/or/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/pa-IN/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/pl/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/pt-BR/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/pt-PT/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/rm/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/ro/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/ru/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/rw/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/sah/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/sat/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/si/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/sk/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/sl/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/son/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/sq/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/sr/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/sv-SE/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/sw/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/ta-LK/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/ta/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/te/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/th/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/tl/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/tn/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/tr/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/tsz/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/uk/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/ur/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/uz/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/vi/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/wo/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/xh/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/zam/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/zh-CN/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/zh-TW/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/locale/zu/viewer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/viewer.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pdfviewer/viewer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/quill/dist/1e7b63404cd2fb8e6525b2fd4ee4d286.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/quill/dist/quill-emoji.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/quill/dist/quill-emoji.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/quill/examples/bubble.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/quill/examples/full.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/quill/examples/snow.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/quill/image-resize.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/quill/quill-autoresize.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/quill/quill-emoji.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/quill/quill-emoji.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/quill/quill.bubble.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/quill/quill.core.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/quill/quill.core.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/quill/quill.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/quill/quill.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/quill/quill.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/quill/quill.snow.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/quill/src/emoji-list.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/quill/src/emoji-map.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/quill/src/format-emoji-blot.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/quill/src/module-emoji.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/quill/src/module-textarea-emoji.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/quill/src/module-toolbar-emoji.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/quill/src/quill-emoji.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/quill/src/scss/core/_emoji.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/quill/src/scss/core/_styles.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/quill/src/scss/core/_variables.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/quill/src/scss/quill-emoji.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/quill/src/sheet_apple_16.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/quill/src/sheet_apple_20.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/quill/src/sheet_apple_32.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/quill/src/sheet_apple_64.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/config/config.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/conteudo/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/conteudo/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/turmas/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/turmas/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/viewers/pdf.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/debugbar/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dictionaries/Cesar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/Cesar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sdacademy.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sdacademy.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Categoria.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Categoria.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CategoriasController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CategoriasController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Curso.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Curso.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ConfigController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ConfigController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CursosController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CursosController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UsersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UsersController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/migrations/2019_09_14_144854_create_categorias_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_09_14_144854_create_categorias_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_09_15_161045_create_cursos_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_09_15_161045_create_cursos_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_09_15_200502_create_config_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_09_15_200502_create_config_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/default-avatar.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/img/default-avatar.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/categorias/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/categorias/create.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/categorias/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/categorias/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/categorias/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/categorias/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/cursos/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/cursos/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/cursos/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/cursos/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/cursos/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/cursos/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/partial/menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partial/menu.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/partial/navbar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partial/navbar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/usuarios/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/usuarios/create.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/usuarios/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/usuarios/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/usuarios/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/usuarios/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -41,6 +503,14 @@
     <execution>
       <executable />
     </execution>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="CSS File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -135,6 +605,20 @@
       <path value="$PROJECT_DIR$/vendor/intervention/image" />
       <path value="$PROJECT_DIR$/vendor/qcod/laravel-imageup" />
       <path value="$PROJECT_DIR$/vendor/lucascudo/laravel-pt-br-localization" />
+      <path value="$PROJECT_DIR$/vendor/jxlwqq/quill" />
+      <path value="$PROJECT_DIR$/vendor/symfony/dom-crawler" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/event-manager" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/vendor/encore/laravel-admin" />
+      <path value="$PROJECT_DIR$/vendor/maximebf/debugbar" />
+      <path value="$PROJECT_DIR$/vendor/barryvdh/laravel-debugbar" />
+      <path value="$PROJECT_DIR$/vendor/patchwork/utf8" />
+      <path value="$PROJECT_DIR$/vendor/anahkiasen/underscore-php" />
+      <path value="$PROJECT_DIR$/vendor/spatie/string" />
+      <path value="$PROJECT_DIR$/vendor/spatie/laravel-activitylog" />
+      <path value="$PROJECT_DIR$/vendor/laravel-admin-ext/media-player" />
+      <path value="$PROJECT_DIR$/vendor/sven/artisan-view" />
     </include_path>
   </component>
   <component name="ProjectId" id="1QkCH8pTgJAjD9YlEkaK3vYclTS" />
@@ -145,18 +629,24 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/conteudo" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\laravel\sdacademy\resources\views\conteudo" />
+      <recent name="C:\laravel\sdacademy\public\assets\js\plugins" />
+      <recent name="C:\laravel\sdacademy\resources\views\turmas" />
+      <recent name="C:\laravel\sdacademy\resources\views\cursos\turmas" />
+      <recent name="C:\laravel\sdacademy" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\laravel\sdacademy\resources\views" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\laravel\sdacademy" />
+      <recent name="C:\laravel\sdacademy\public\assets\quill" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -197,7 +687,17 @@
       <workItem from="1568505167141" duration="1186000" />
       <workItem from="1568506978346" duration="14498000" />
       <workItem from="1568555325824" duration="23166000" />
-      <workItem from="1568650405417" duration="2165000" />
+      <workItem from="1568650405417" duration="3200000" />
+      <workItem from="1568667788552" duration="499000" />
+      <workItem from="1568676948608" duration="11568000" />
+      <workItem from="1568932207863" duration="39255000" />
+      <workItem from="1569157695603" duration="304000" />
+      <workItem from="1569158217963" duration="10401000" />
+      <workItem from="1569240331541" duration="8161000" />
+      <workItem from="1569344400772" duration="3051000" />
+      <workItem from="1569352872757" duration="600000" />
+      <workItem from="1569459008998" duration="21000" />
+      <workItem from="1569459096628" duration="5545000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1568322282082</created>
@@ -234,7 +734,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568574480330</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Terceiro update">
+      <created>1568658896386</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1568658896386</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

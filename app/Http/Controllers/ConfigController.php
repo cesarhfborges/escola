@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Config;
 use Illuminate\Http\Request;
 
 class ConfigController extends Controller
@@ -13,7 +14,8 @@ class ConfigController extends Controller
      */
     public function index()
     {
-        //
+        $config = Config::first();
+        return view('config.config')->with('config', $config);
     }
 
     /**

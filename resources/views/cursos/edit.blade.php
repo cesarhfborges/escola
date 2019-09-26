@@ -24,7 +24,6 @@
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-md-4">
-
                                     <div class="col-12 m-0 p-0" id="image">
                                         <img src="{{ url($data['curso']->avatar) }}" id="avatarImage" class="rounded mx-auto d-block img-fluid" alt="...">
                                         <div class="row pl-3 pr-3">
@@ -32,7 +31,6 @@
                                             <button type="button" id="change" class="btn btn-info col">Alterar</button>
                                         </div>
                                     </div>
-
                                     <div class="col-12 m-0 p-0 d-none" id="crop">
                                         <div class="col-md-12 m-0 p-0 text-center">
                                             <div id="upload-demo"></div>
@@ -44,7 +42,7 @@
                                     </div>
                                     <input type="file" class="col-12 mt-5 d-none" accept="image/*" id="strPhoto">
                                 </div>
-                                <div class="col-md-8">
+                                <div class="col-md-8 mt-3">
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="form-group">
@@ -64,7 +62,7 @@
                                         </div>
                                         <div class="col-md-4">
                                             <div class="form-group">
-                                                <label class="bmd-label-static">Categoria</label>
+                                                <label class="bmd-label-static">Custo</label>
                                                 <select class="selectpicker" name="custo" id="custo" data-live-search="true" data-style="btn-primary select-with-transition form-control col-12" data-size="7">
                                                     <option value="pago" @if($data['curso']->custo == 'pago') selected @endif>Pago</option>
                                                     <option value="gratis" @if($data['curso']->custo == 'gratis') selected @endif>Gratis</option>
@@ -77,13 +75,54 @@
                                                 <input type="text" class="form-control money" name="valor" id="valor" value="{{ $data['curso']->preco }}">
                                             </div>
                                         </div>
-                                        <div class="col-md-12">
+                                        <div class="col-md-4">
                                             <div class="form-group">
-                                                <label class="bmd-label-static">Descrição</label>
-                                                <textarea class="form-control" rows="5" name="descricao">{{ $data['curso']->descricao }}</textarea>
+                                                <label class="bmd-label-static">% de Aprovação</label>
+                                                <input type="text" class="form-control text-center" name="margem" id="margem" value="{{ $data['curso']->margem }}">
                                             </div>
                                         </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label class="bmd-label-static">Arredondar se acima de %</label>
+                                                <input type="text" class="form-control text-center" name="arredondar" id="arredondar" value="{{ $data['curso']->arredondar }}">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label class="bmd-label-static">Configuração</label>
+                                                <select class="selectpicker" name="configuracao" id="configuracao" data-live-search="true" data-style="btn-primary select-with-transition form-control col-12" data-size="7">
+                                                    <option value="sessaotempo" @if($data['curso']->configuracao == 'sessaotempo') selected @endif>Sessão e Tempo</option>
+                                                    <option value="sessao" @if($data['curso']->configuracao == 'sessao') selected @endif>Apenas Sessão</option>
+                                                    <option value="nenhum" @if($data['curso']->configuracao == 'nenhum') selected @endif>Nenhuma</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label class="bmd-label-static">Tempo da Sessão</label>
+                                                <input type="text" class="form-control timepicker text-center" name="sessao" id="sessao" value="{{ $data['curso']->sessao }}">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label class="bmd-label-static">Total de Perguntas</label>
+                                                <input type="text" class="form-control text-center" id="totalPerguntas" disabled value="48">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label class="bmd-label-static">NAADA</label>
+                                                <input type="text" class="form-control text-center" id="naada" disabled value="000">
+                                            </div>
+                                        </div>
+                                        <textarea class=" d-none" rows="5" name="descricao" id="descricao">{{ $data['curso']->descricao }}</textarea>
                                         <input type="text" class="d-none" value="" id="avatar" name="avatar">
+                                    </div>
+                                </div>
+                                <div class="col-md-12 mt-3">
+                                    <div class="col-12 m-0 p-0">
+                                        <label>Descrição</label>
+                                        <div id="quill-editor"></div>
                                     </div>
                                 </div>
                             </div>
@@ -100,11 +139,70 @@
 @endsection
 
 @section('jsimport')
+    <script src="{{ asset('assets/js/plugins/bootstrap-datetimepicker.min.js') }}"></script>
     <script src="{{ asset('assets/js/cropper/croppie.js') }}"></script>
     <script src="{{ asset('assets/js/mask/inputMaskPlugin.js') }}"></script>
     <script type="text/javascript">
 
         $(document).ready(function () {
+
+            $(".timepicker").datetimepicker({
+                format:"HH:mm:ss",
+                icons:{
+                    time:"fa fa-clock-o",
+                    date:"fa fa-calendar",
+                    up:"fa fa-chevron-up",
+                    down:"fa fa-chevron-down",
+                    previous:"fa fa-chevron-left",
+                    next:"fa fa-chevron-right",
+                    today:"fa fa-screenshot",
+                    clear:"fa fa-trash",
+                    close:"fa fa-remove"
+                }
+            });
+
+            let toolbarOptions = {
+                container: [
+                    [{ 'font': [] }],
+                    [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
+                    ['bold', 'italic', 'underline', 'strike'],
+                    ['blockquote', 'code-block'],
+                    [{ 'list': 'ordered' }, { 'list': 'bullet' }],
+                    [{ 'script': 'sub' }, { 'script': 'super' }],
+                    [{ 'indent': '-1' }, { 'indent': '+1' }],
+                    [{ 'color': [] }, { 'background': [] }],
+                    [{ 'align': [] }],
+                    // ['link', 'image', 'video'],
+                    ['emoji'],
+                    ['clean'],
+                ],
+                handlers: {
+                    'emoji': function () {}
+                }
+            };
+            let quill = new Quill('#quill-editor', {
+                modules: {
+                    "toolbar": toolbarOptions,
+                    "emoji-toolbar": true,
+                    "emoji-shortname": true,
+                    "emoji-textarea": false,
+                    history: {
+                        delay: 2000,
+                        maxStack: 500,
+                        userOnly: true
+                    }
+                },
+                placeholder: 'Descrição',
+                theme: 'snow',
+            });
+
+
+            quill.root.innerHTML = $('#descricao').val();
+
+            quill.on('text-change', function(delta, oldDelta, source) {
+                $('#descricao').val(quill.root.innerHTML);
+                // $(this).height(self.editor.root.ownerDocument.body.scrollHeight);
+            });
 
             $.ajaxSetup({
                 headers: {
