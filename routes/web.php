@@ -14,14 +14,17 @@ Route::group([
 
     Route::get('home', 'HomeController@index')->name('home');
 
+    Route::resource('config', 'ConfigController')->only(['index', 'update']);
+
     Route::resource('perfil', 'ProfileController');
 
     Route::resource('usuarios', 'UsersController');
 
     Route::post('upload.image', 'UploadController@image')->name('image.upload');
 
-    Route::get('config', 'ConfigController@index')->name('config.index');
-    Route::put('config', 'ConfigController@update')->name('config.update');
+    Route::resource('cupons', 'CuponsController');
+
+    Route::resource('mensagens', 'MensagensController');
 
     Route::group([
         'prefix' => '/cursos'
@@ -32,6 +35,11 @@ Route::group([
         Route::resource('turmas.conteudo', 'ConteudoController');
 //        Route::resource('/turmas/{turma}/conteudo/{conteudo}', 'ConteudoController');
 //        Route::resource('/turmas/{id}/conteudo/', 'ConteudoController');
+
+
+        //Aluno Controller
+        Route::resource('disponiveis', 'Aluno\CursosController')->only(['index', 'show']);
+        Route::resource('disponiveis.turmas', 'Aluno\TurmasController')->only(['index']);
     });
 
 

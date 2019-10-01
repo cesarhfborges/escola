@@ -2,6 +2,12 @@
 
 @section('cssimport')
     <link rel="stylesheet" href="{{ asset('assets/css/cropper/croppie.min.css') }}">
+    <style>
+        .sticky-top
+        {
+            top: 40px;
+        }
+    </style>
 @stop
 
 
@@ -9,7 +15,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-4">
-                <div class="card">
+                <div class="card sticky-top">
                     <div class="card-header card-header-icon card-header-secondary">
                         <div class="card-icon">
                             <i class="material-icons">category</i>
@@ -272,6 +278,13 @@
                     clear:"fa fa-trash",
                     close:"fa fa-remove"
                 }
+            });
+
+            $("#inicio").on("dp.change", function (e) {
+                $('#termino').data("DateTimePicker").minDate(e.date);
+            });
+            $("#termino").on("dp.change", function (e) {
+                $('#inicio').data("DateTimePicker").maxDate(e.date);
             });
         });
     </script>

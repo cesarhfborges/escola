@@ -90,7 +90,7 @@
                                         <div class="col-md-3">
                                             <div class="form-group">
                                                 <label class="bmd-label-static">Tipo de Usuário</label>
-                                                <select class="selectpicker" name="tipo" data-live-search="true"
+                                                <select class="selectpicker" name="tipo" data-live-search="true" @if(Auth::id() == $usuario->id) disabled @endif
                                                         data-style="btn-primary select-with-transition form-control col-12" data-size="7">
                                                     <option value="estudante" @if($usuario->tipo == 'estudante') selected @endif >Estudante</option>
                                                     <option value="professor" @if($usuario->tipo == 'professor') selected @endif >Professor</option>

@@ -6,6 +6,28 @@
     <link rel="apple-touch-icon" sizes="76x76" href="{{ asset('assets/img/apple-icon.png') }}">
     <link rel="icon" type="image/png" href="{{ asset('assets/img/favicon.png') }}">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="cache-control" content="public">
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta http-equiv="expires" content="Mon, 27 sep 2019 11:12:01 GMT" />
+    <meta http-equiv="imagetoolbar" content="no" />
+    <meta name="generator" content="Laravel 5.8" />
+    <meta name="revisit-after" content="1 days" />
+    <meta name="rating" content="general" />
+
+    <meta name="googlebot" content="noarchive">
+    <meta name="google-site-verification" content="{{ env('GOOGLE_SITE_VERIFICATION') }}"/>
+
+    {{--  SEO  --}}
+    <meta http-equiv="content-language" content="{{ env('CONTENT_LANGUAGE') }}" />
+    <meta name="copyright" content="{{ env('SITE_COPYRIGHT') }}" />
+    <meta name="description" content="{{ env('SITE_DESCRIPTION') }}" />
+    <link rel="canonical" href="http://{{ url('/') }}">
+    <meta name="keywords" content="sdredes, sdredes escola, sdredes certificacao, sdredes sophos, sdredes brasilia, sdredes seguranca, sdredes ti, sdredes sdacademy, sdacademy">
+    <meta itemprop="name" content="SdAcademy Certificações Redes, Firewall.">
+    <meta itemprop="image" content="http://sdacademy.sdredes.info/public/uploads/settings/DsYHVCdPAIAvepw.png">
+
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
@@ -24,11 +46,20 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/quill/quill.snow.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/quill/dist/quill-emoji.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/quill/quill-autoresize.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/notification.css') }}">
 
     @yield('cssimport')
 
 </head>
-<body class="">
+<body id="body" class="" style="overflow: hidden;">
+<script>
+    (function () {
+        let body = document.getElementById('body');
+        if (localStorage.getItem('menuState') === '1'){
+            body.className = 'sidebar-mini';
+        }
+    })();
+</script>
 <div class="wrapper ">
     @include('partial.menu')
 
@@ -36,9 +67,8 @@
         <!-- Navbar -->
         @include('partial.navbar')
         <!-- End Navbar -->
-        <div class="content">
+        <div class="content m-0 pt-5 mt-3">
             <main>
-                @include('notifications.flash-message')
                 @yield('content')
             </main>
         </div>
@@ -94,9 +124,10 @@
 <script src="{{ asset('assets/quill/quill.min.js') }}"></script>
 <script src="{{ asset('assets/quill/dist/quill-emoji.js') }}"></script>
 <script src="{{ asset('assets/quill/image-resize.min.js') }}"></script>
-
+<script src="{{ asset('assets/js/notification.js') }}"></script>
 
 @yield('jsimport')
+@include('notifications.flash-message')
 
 </body>
 

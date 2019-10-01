@@ -27,4 +27,12 @@ class Curso extends Model
     {
         return $this->belongsTo(Categoria::class, 'categoria_id');
     }
+
+    public function turmas(){
+        return $this->hasMany(Turma::class, 'curso_id', 'id');
+    }
+
+    public function conteudo(){
+        return $this->hasMany(Conteudo::class, 'curso_id', 'id');
+    }
 }

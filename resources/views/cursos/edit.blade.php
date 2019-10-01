@@ -115,7 +115,7 @@
                                                 <input type="text" class="form-control text-center" id="naada" disabled value="000">
                                             </div>
                                         </div>
-                                        <textarea class=" d-none" rows="5" name="descricao" id="descricao">{{ $data['curso']->descricao }}</textarea>
+                                        <textarea class="d-none" rows="5" name="descricao" id="descricao">{!! $data['curso']->descricao !!}</textarea>
                                         <input type="text" class="d-none" value="" id="avatar" name="avatar">
                                     </div>
                                 </div>

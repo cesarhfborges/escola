@@ -10,13 +10,13 @@ class Exame extends Model
     use SoftDeletes;
 
     protected $fillable = [
-        'turma_id',
+        'curso_id',
         'titulo',
         'status',
     ];
 
-    public function turma()
+    public function curso()
     {
-        return $this->belongsTo(Turma::class, 'id');
+        return $this->belongsTo(Curso::class, 'id');
     }
 }

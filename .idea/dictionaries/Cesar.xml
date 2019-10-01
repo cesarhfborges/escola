@@ -1,14 +1,19 @@
 <component name="ProjectDictionaryState">
   <dictionary name="Cesar">
     <words>
+      <w>ativacoes</w>
+      <w>atualizadas</w>
       <w>cancelar</w>
       <w>categoria</w>
       <w>categorias</w>
+      <w>codigo</w>
+      <w>configurações</w>
       <w>confirmar</w>
       <w>conteudo</w>
       <w>conteudos</w>
       <w>cropp</w>
       <w>cssimport</w>
+      <w>cupons</w>
       <w>curso</w>
       <w>cursos</w>
       <w>custo</w>
@@ -16,8 +21,10 @@
       <w>deletar</w>
       <w>descricao</w>
       <w>descrição</w>
+      <w>disponiveis</w>
       <w>exame</w>
       <w>exames</w>
+      <w>financeiro</w>
       <w>inicio</w>
       <w>itens</w>
       <w>pago</w>
@@ -30,6 +37,7 @@
       <w>turma</w>
       <w>turmas</w>
       <w>usuario</w>
+      <w>validade</w>
     </words>
   </dictionary>
 </component>

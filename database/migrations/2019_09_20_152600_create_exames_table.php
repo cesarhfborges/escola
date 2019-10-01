@@ -15,7 +15,7 @@ class CreateExamesTable extends Migration
     {
         Schema::create('exames', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('turma_id');
+            $table->unsignedBigInteger('curso_id');
 
             $table->string('titulo')->nullable(false);
             $table->boolean('status')->default(true);
@@ -23,7 +23,7 @@ class CreateExamesTable extends Migration
             $table->softDeletes();
             $table->timestamps();
 
-            $table->foreign('turma_id')->references('id')->on('turmas')->onDelete('restrict');
+            $table->foreign('curso_id')->references('id')->on('cursos')->onDelete('restrict');
         });
     }
 

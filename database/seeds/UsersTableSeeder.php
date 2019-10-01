@@ -19,6 +19,17 @@ class UsersTableSeeder extends Seeder
             'sobrenome' => Str::random(10),
             'email' => 'cesar@sdredes.com.br',
             'password' => bcrypt('admin'),
+            'tipo' => 'admin',
+            'email_verified_at' => Carbon::now(),
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now(),
+        ]);
+        DB::table('users')->insert([
+            'nome' => 'Usuario',
+            'sobrenome' => Str::random(10),
+            'email' => 'cesarhfborges@gmail.com',
+            'password' => bcrypt('admin'),
+            'tipo' => 'estudante',
             'email_verified_at' => Carbon::now(),
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now(),

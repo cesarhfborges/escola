@@ -59,16 +59,16 @@
                                             <td class="text-center">{{ $curso->custo }}</td>
                                             <td class="text-center">R$ {{ number_format($curso->preco, 2, ',', '.') }}</td>
                                             <td class="text-right">
-                                                <a href="{{ route('turmas.index', ['curso' => $curso]) }}" class="btn btn-link btn-warning">
+                                                <a href="{{ route('turmas.index', ['curso' => $curso]) }}" class="btn btn-outline-primary">
                                                     <i class="material-icons">format_align_justify</i> Turmas
                                                 </a>
-                                                <a href="{{ route('cursos.edit', ['curso' => $curso]) }}" class="btn btn-link btn-warning">
+                                                <a href="{{ route('cursos.edit', ['curso' => $curso]) }}" class="btn btn-outline-info">
                                                     <i class="material-icons">inbox</i> Conteudo
                                                 </a>
-                                                <a href="{{ route('cursos.edit', ['curso' => $curso]) }}" class="btn btn-link btn-warning edit">
+                                                <a href="{{ route('cursos.edit', ['curso' => $curso]) }}" class="btn btn-outline-warning edit">
                                                     <i class="material-icons">dvr</i> Editar
                                                 </a>
-                                                <button type="button" data-delete="{{ $curso->id }}" class="btn btn-link btn-danger remove">
+                                                <button type="button" data-delete="{{ $curso->id }}" class="btn btn-outline-danger remove">
                                                     <i class="material-icons">close</i> Excluir
                                                 </button>
                                             </td>

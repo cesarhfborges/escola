@@ -62,10 +62,12 @@
                                             <td>{{ $usuario->empresa }}</td>
                                             <td>{{ $usuario->cargo }}</td>
                                             <td class="text-right">
-                                                <a href="{{ route('usuarios.edit', ['usuario' => $usuario]) }}"
-                                                   class="btn btn-link btn-warning btn-just-icon edit"><i
-                                                        class="material-icons">dvr</i></a>
-                                                <button type="button" data-delete="{{ $usuario->id }}" class="btn btn-link btn-danger btn-just-icon remove"><i class="material-icons">close</i></button>
+                                                <a href="{{ route('usuarios.edit', ['usuario' => $usuario]) }}" class="btn btn-outline-warning edit">
+                                                    <i class="material-icons">dvr</i> Editar
+                                                </a>
+                                                <button type="button" data-delete="{{ $usuario->id }}" class="btn btn-outline-danger remove">
+                                                    <i class="material-icons">close</i> Excluir
+                                                </button>
                                             </td>
                                         </tr>
                                     @endforeach
@@ -95,45 +97,49 @@
             });
 
             $('.remove').on('click', function (event) {
-                swal({
-                    title               : 'Excluir usuário ?',
-                    text                : "Atenção, esta ação não poderá ser desfeita!",
-                    type                : 'warning',
-                    showCancelButton    : true,
-                    confirmButtonColor  : '#3085d6',
-                    cancelButtonColor   : '#d33',
-                    confirmButtonText   : 'Sim, delete!',
-                    cancelButtonText    : 'Cancelar',
-                    reverseButtons: true,
-                }).then((response) => {
-                    if (response.value) {
-                        $.ajax({
-                            url : "{{ url('usuarios')}}" + '/' + $(this).attr('data-delete'),
-                            type : "POST",
-                            data : {'_method' : 'DELETE'},
-                            success: function(){
-                                swal({
+                try{
+                    swal({
+                        title               : 'Excluir usuário ?',
+                        text                : "Atenção, esta ação não poderá ser desfeita!",
+                        type                : 'warning',
+                        showCancelButton    : true,
+                        confirmButtonColor  : '#3085d6',
+                        cancelButtonColor   : '#d33',
+                        confirmButtonText   : 'Sim, delete!',
+                        cancelButtonText    : 'Cancelar',
+                        reverseButtons: true,
+                    }).then((response) => {
+                        if (response.value) {
+                            $.ajax({
+                                url : "{{ url('usuarios')}}" + '/' + $(this).attr('data-delete'),
+                                type : "POST",
+                                data : {'_method' : 'DELETE'},
+                                success: function(){
+                                    swal({
                                         type    : 'success',
                                         title   : "Success!",
                                         text    : "Usuário removido com sucesso.",
                                         icon    : "success",
                                         timer   : '1500'
                                     }).then(() => {
-                                    location.reload();
-                                })
+                                        location.reload();
+                                    }).catch(swal.noop)
 
-                            },
-                            error : function(data){
-                                swal({
-                                    title   : 'Opps...',
-                                    text    : data.message,
-                                    type    : 'error',
-                                    timer   : '1500'
-                                })
-                            }
-                        })
-                    }
-                });
+                                },
+                                error : function(data){
+                                    swal({
+                                        title   : 'Opps...',
+                                        text    : data.responseJSON.response,
+                                        type    : 'error',
+                                        timer   : '1500'
+                                    }).catch(swal.noop);
+                                }
+                            })
+                        }
+                    }).catch(swal.noop);
+                } catch (e) {
+
+                }
             });
         });
     </script>

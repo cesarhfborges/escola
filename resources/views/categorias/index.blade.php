@@ -53,10 +53,12 @@
                                             <td>{{ $categoria->nome }}</td>
                                             <td>{{ $categoria->descricao }}</td>
                                             <td class="text-right">
-                                                <a href="{{ route('categorias.edit', ['categoria' => $categoria]) }}"
-                                                   class="btn btn-link btn-warning btn-just-icon edit"><i
-                                                        class="material-icons">dvr</i></a>
-                                                <button type="button" data-delete="{{ $categoria->id }}" class="btn btn-link btn-danger btn-just-icon remove"><i class="material-icons">close</i></button>
+                                                <a href="{{ route('categorias.edit', ['categoria' => $categoria]) }}" class="btn btn-outline-warning edit">
+                                                    <i class="material-icons">dvr</i> Editar
+                                                </a>
+                                                <button type="button" data-delete="{{ $categoria->id }}" class="btn btn-outline-danger remove">
+                                                    <i class="material-icons">close</i> Excluir
+                                                </button>
                                             </td>
                                         </tr>
                                     @endforeach

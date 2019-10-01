@@ -232,9 +232,10 @@ $(window).resize(function() {
 
 md = {
   misc: {
-    navbar_menu_visible: 0,
-    active_collapse: true,
-    disabled_collapse_init: 0,
+      navbar_menu_visible: 0,
+      active_collapse: true,
+      disabled_collapse_init: 0,
+      sidebar_mini_active: document.getElementById('body').className == 'sidebar-mini' ? true : false
   },
 
   checkSidebarImage: function() {
@@ -491,28 +492,49 @@ md = {
   },
 
   initMinimizeSidebar: function() {
+      $('#minimizeSidebar').click(function() {
+          let $btn = $(this);
+          if (md.misc.sidebar_mini_active === true) {
+              $('body').removeClass('sidebar-mini');
+              md.misc.sidebar_mini_active = false;
+              localStorage.setItem('menuState', '0');
+          } else {
+              $('body').addClass('sidebar-mini');
+              md.misc.sidebar_mini_active = true;
+              localStorage.setItem('menuState', '1')
+          }
 
-    $('#minimizeSidebar').click(function() {
-      var $btn = $(this);
+          // we simulate the window Resize so the charts will get updated in realtime.
+          let simulateWindowResize = setInterval(function() {
+              window.dispatchEvent(new Event('resize'));
+          }, 180);
 
-      if (md.misc.sidebar_mini_active == true) {
-        $('body').removeClass('sidebar-mini');
-        md.misc.sidebar_mini_active = false;
-      } else {
-        $('body').addClass('sidebar-mini');
-        md.misc.sidebar_mini_active = true;
-      }
-
-      // we simulate the window Resize so the charts will get updated in realtime.
-      var simulateWindowResize = setInterval(function() {
-        window.dispatchEvent(new Event('resize'));
-      }, 180);
-
-      // we stop the simulation of Window Resize after the animations are completed
-      setTimeout(function() {
-        clearInterval(simulateWindowResize);
-      }, 1000);
-    });
+          // we stop the simulation of Window Resize after the animations are completed
+          setTimeout(function() {
+              clearInterval(simulateWindowResize);
+          }, 1000);
+      });
+    // $('#minimizeSidebar').click(function() {
+    //   var $btn = $(this);
+    //
+    //   if (md.misc.sidebar_mini_active == true) {
+    //     $('body').removeClass('sidebar-mini');
+    //     md.misc.sidebar_mini_active = false;
+    //   } else {
+    //     $('body').addClass('sidebar-mini');
+    //     md.misc.sidebar_mini_active = true;
+    //   }
+    //
+    //   // we simulate the window Resize so the charts will get updated in realtime.
+    //   var simulateWindowResize = setInterval(function() {
+    //     window.dispatchEvent(new Event('resize'));
+    //   }, 180);
+    //
+    //   // we stop the simulation of Window Resize after the animations are completed
+    //   setTimeout(function() {
+    //     clearInterval(simulateWindowResize);
+    //   }, 1000);
+    // });
   },
 
   checkScrollForTransparentNavbar: debounce(function() {

@@ -15,7 +15,7 @@ class CreateConteudosTable extends Migration
     {
         Schema::create('conteudos', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('turma_id');
+            $table->unsignedBigInteger('curso_id');
 
             $table->string('titulo')->nullable(false);
             $table->string('modulo')->nullable(true);
@@ -30,7 +30,7 @@ class CreateConteudosTable extends Migration
             $table->softDeletes();
             $table->timestamps();
 
-            $table->foreign('turma_id')->references('id')->on('turmas')->onDelete('restrict');
+            $table->foreign('curso_id')->references('id')->on('cursos')->onDelete('restrict');
         });
     }
 

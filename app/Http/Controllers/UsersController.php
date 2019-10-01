@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Validation\ValidationException;
 
@@ -135,7 +136,9 @@ class UsersController extends Controller
             $usuario->uf = $request->uf;
             $usuario->complemento = $request->complemento;
             $usuario->avatar = $request->avatar;
-            $usuario->tipo = $request->tipo;
+            if ($id != Auth::id()){
+                $usuario->tipo = $request->tipo;
+            }
 //            $request->file('avatar') ? $usuario->uploadImage($request->file('avatar'), 'avatar') : null;
             $usuario->save();
     //        Flash::message('Your account has been updated!');
@@ -155,6 +158,13 @@ class UsersController extends Controller
     {
         try{
             $usuario = User::findOrFail($id);
+
+            if ($id == Auth::id()){
+                return response()->json([
+                    'response' => 'Você não pode excluir seu proprio usuário.'
+                ], 401);
+//                return back()->with('error', 'Você não pode excluir seu proprio usuário.');
+            }
 
             if ($usuario->delete()){
                 return response()->json([

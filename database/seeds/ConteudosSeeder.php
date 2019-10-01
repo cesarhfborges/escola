@@ -1,6 +1,7 @@
 <?php
 
 use App\Conteudo;
+use App\Curso;
 use App\Turma;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Str;
@@ -14,10 +15,10 @@ class ConteudosSeeder extends Seeder
      */
     public function run()
     {
-        $turma = Turma::first();
+        $curso = Curso::first();
         for ($i = 0; $i < 10; $i++){
             $conteudo = new Conteudo([
-                'turma_id' => $turma->id,
+                'curso_id' => $curso->id,
                 'titulo' => 'conteudo ' . $i . ': '.Str::random(10),
                 'avatar' => 'assets/img/attachment.png',
                 'tipo' => 'url',

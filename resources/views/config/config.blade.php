@@ -5,72 +5,95 @@
         <div class="row d-flex justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header card-header-tabs card-header-info">
-                        <div class="nav-tabs-navigation">
-                            <div class="nav-tabs-wrapper">
-                                <span class="nav-tabs-title font-weight-bold text-dark">Configurações:</span>
-                                <ul class="nav nav-tabs" data-tabs="tabs">
-                                    <li class="nav-item">
-                                        <a class="nav-link active show" href="#sistema" data-toggle="tab">
-                                            <i class="material-icons">code</i> Website
-                                            <div class="ripple-container"></div>
-                                            <div class="ripple-container"></div>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#messages" data-toggle="tab">
-                                            <i class="material-icons">phone</i> Contato
-                                            <div class="ripple-container"></div>
-                                            <div class="ripple-container"></div>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#settings" data-toggle="tab">
-                                            <i class="material-icons">mail</i> E-Mail
-                                            <div class="ripple-container"></div>
-                                            <div class="ripple-container"></div>
-                                        </a>
-                                    </li>
-                                </ul>
+                    <form method="post" action="{{ route('config.update', $config->id) }}" autocomplete="off">
+                        @csrf
+                        @method('PATCH')
+                        <div class="card-header card-header-tabs card-header-info">
+                            <div class="nav-tabs-navigation">
+                                <div class="nav-tabs-wrapper">
+                                    <span class="nav-tabs-title font-weight-bold text-dark">Configurações:</span>
+                                    <ul class="nav nav-tabs" data-tabs="tabs">
+                                        <li class="nav-item">
+                                            <a class="nav-link active show" href="#sistema" data-toggle="tab">
+                                                <i class="material-icons">code</i> Website
+                                                <div class="ripple-container"></div>
+                                                <div class="ripple-container"></div>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#messages" data-toggle="tab">
+                                                <i class="material-icons">phone</i> Contato
+                                                <div class="ripple-container"></div>
+                                                <div class="ripple-container"></div>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#settings" data-toggle="tab">
+                                                <i class="material-icons">mail</i> E-Mail
+                                                <div class="ripple-container"></div>
+                                                <div class="ripple-container"></div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="card-body">
-                        <form action="/" autocomplete="off">
-                            @csrf
-                            @method('PUT')
+                        <div class="card-body">
                             <div class="tab-content">
                                 <div class="tab-pane active show" id="sistema">
                                     <div class="row">
-                                        <label class="col-sm-2 col-form-label">Nome do Site</label>
-                                        <div class="col-sm-10">
-                                            <div class="form-group bmd-form-group">
-                                                <input type="text" name="nomesite" class="form-control" autocomplete="off">
-                                                <span class="bmd-help">Nome do sistema que ficará visivel no menu, navegador e etc.</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
                                         <label class="col-sm-2 col-form-label">Logotipo</label>
-                                        <div class="col-sm-10">
-                                            <div class="form-group bmd-form-group">
-                                                <input type="text" class="form-control">
+                                        <div class="col-sm-6">
+                                            <div class="form-group form-file-upload form-file-multiple">
+                                                <input type="file" name="avatar" class="inputFileHidden" accept="image/*">
+                                                <div class="input-group">
+                                                    <input type="text" class="form-control inputFileVisible" placeholder="Upload Avatar" value="{{ $config->avatar }}" readonly>
+                                                    <span class="input-group-btn">
+                                                        <button type="button" id="selectLogo" class="btn btn-fab btn-round btn-primary">
+                                                            <i class="material-icons">attach_file</i>
+                                                        </button>
+                                                        <button type="button" id="removelogo" class="btn btn-fab btn-round btn-danger">
+                                                            <i class="material-icons">delete</i>
+                                                        </button>
+                                                    </span>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <label class="col-sm-2 col-form-label">Favicon</label>
+                                        <div class="col-sm-6">
+                                            <div class="form-group form-file-upload form-file-multiple">
+                                                <input type="file" name="favicon" class="inputFileHidden" accept="image/*">
+                                                <div class="input-group">
+                                                    <input type="text" class="form-control inputFileVisible" placeholder="Upload Favicon" value="{{ $config->favicon }}" readonly>
+                                                    <span class="input-group-btn">
+                                                        <button type="button" class="btn btn-fab btn-round btn-primary">
+                                                            <i class="material-icons">attach_file</i>
+                                                        </button>
+                                                        <button type="button" class="btn btn-fab btn-round btn-danger">
+                                                            <i class="material-icons">delete</i>
+                                                        </button>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <label class="col-sm-2 col-form-label">Nome do Site</label>
                                         <div class="col-sm-10">
                                             <div class="form-group bmd-form-group">
-                                                <input type="text" class="form-control" placeholder="placeholder">
+                                                <input type="text" name="nomesite" class="form-control" autocomplete="off" value="{{ $config->nome_site }}">
+                                                <span class="bmd-help">Nome do sistema que ficará visivel no menu, navegador e etc.</span>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <label class="col-sm-2 col-form-label">Região</label>
+                                        <label class="col-sm-2 col-form-label">regiao</label>
                                         <div class="col-sm-6">
                                             <div class="form-group bmd-form-group">
-                                                <select class="selectpicker" name="uf" data-live-search="true" data-style="select-with-transition form-control col-12 mt-0" data-size="7">
+                                                <select class="selectpicker" name="regiao" data-live-search="true" data-style="select-with-transition form-control col-12 mt-0" data-size="7">
                                                     <option value="-12:00">(GMT -12:00) Eniwetok, Kwajalein</option>
                                                     <option value="-11:00">(GMT -11:00) Midway Island, Samoa</option>
                                                     <option value="-10:00">(GMT -10:00) Hawaii</option>
@@ -117,7 +140,7 @@
                                         <label class="col-sm-2 col-form-label">Simbolo Monetário</label>
                                         <div class="col-sm-2">
                                             <div class="form-group bmd-form-group">
-                                                <input type="text" class="form-control text-center" minlength="1" maxlength="3" placeholder="R$">
+                                                <input type="text" class="form-control text-center" name="monetario" minlength="1" maxlength="3" placeholder="R$" value="{{ $config->monetario }}">
                                             </div>
                                         </div>
                                     </div>
@@ -125,141 +148,102 @@
                                         <label class="col-sm-2 col-form-label">Rodapé</label>
                                         <div class="col-sm-10">
                                             <div class="form-group bmd-form-group">
-                                                <textarea class="form-control" rows="5"></textarea>
+                                                <textarea class="form-control" name="rodape" rows="5">{{ $config->rodape }}</textarea>
                                             </div>
                                         </div>
                                     </div>
-                                    {{--                                <div class="row">--}}
-                                    {{--                                    <label class="col-sm-2 col-form-label">Disabled</label>--}}
-                                    {{--                                    <div class="col-sm-10">--}}
-                                    {{--                                        <div class="form-group bmd-form-group is-filled">--}}
-                                    {{--                                            <input type="text" class="form-control" value="Disabled input here.." disabled="">--}}
-                                    {{--                                        </div>--}}
-                                    {{--                                    </div>--}}
-                                    {{--                                </div>--}}
-                                    {{--                                <div class="row">--}}
-                                    {{--                                    <label class="col-sm-2 col-form-label">Static control</label>--}}
-                                    {{--                                    <div class="col-sm-10">--}}
-                                    {{--                                        <div class="form-group">--}}
-                                    {{--                                            <p class="form-control-static">hello@creative-tim.com</p>--}}
-                                    {{--                                        </div>--}}
-                                    {{--                                    </div>--}}
-                                    {{--                                </div>--}}
-                                    {{--                                <div class="row">--}}
-                                    {{--                                    <label class="col-sm-2 col-form-label label-checkbox">Checkboxes and radios</label>--}}
-                                    {{--                                    <div class="col-sm-10 checkbox-radios">--}}
-                                    {{--                                        <div class="form-check">--}}
-                                    {{--                                            <label class="form-check-label">--}}
-                                    {{--                                                <input class="form-check-input" type="checkbox" value=""> First Checkbox--}}
-                                    {{--                                                <span class="form-check-sign">--}}
-                                    {{--                              <span class="check"></span>--}}
-                                    {{--                            </span>--}}
-                                    {{--                                            </label>--}}
-                                    {{--                                        </div>--}}
-                                    {{--                                        <div class="form-check">--}}
-                                    {{--                                            <label class="form-check-label">--}}
-                                    {{--                                                <input class="form-check-input" type="checkbox" value=""> Second Checkbox--}}
-                                    {{--                                                <span class="form-check-sign">--}}
-                                    {{--                              <span class="check"></span>--}}
-                                    {{--                            </span>--}}
-                                    {{--                                            </label>--}}
-                                    {{--                                        </div>--}}
-                                    {{--                                        <div class="form-check">--}}
-                                    {{--                                            <label class="form-check-label">--}}
-                                    {{--                                                <input class="form-check-input" type="radio" name="exampleRadios" value="option2" checked=""> First Radio--}}
-                                    {{--                                                <span class="circle">--}}
-                                    {{--                              <span class="check"></span>--}}
-                                    {{--                            </span>--}}
-                                    {{--                                            </label>--}}
-                                    {{--                                        </div>--}}
-                                    {{--                                        <div class="form-check">--}}
-                                    {{--                                            <label class="form-check-label">--}}
-                                    {{--                                                <input class="form-check-input" type="radio" name="exampleRadios" value="option1"> Second Radio--}}
-                                    {{--                                                <span class="circle">--}}
-                                    {{--                              <span class="check"></span>--}}
-                                    {{--                            </span>--}}
-                                    {{--                                            </label>--}}
-                                    {{--                                        </div>--}}
-                                    {{--                                    </div>--}}
-                                    {{--                                </div>--}}
-                                    {{--                                <div class="row">--}}
-                                    {{--                                    <label class="col-sm-2 col-form-label label-checkbox">Inline checkboxes</label>--}}
-                                    {{--                                    <div class="col-sm-10 checkbox-radios">--}}
-                                    {{--                                        <div class="form-check form-check-inline">--}}
-                                    {{--                                            <label class="form-check-label">--}}
-                                    {{--                                                <input class="form-check-input" type="checkbox" value=""> a--}}
-                                    {{--                                                <span class="form-check-sign">--}}
-                                    {{--                              <span class="check"></span>--}}
-                                    {{--                            </span>--}}
-                                    {{--                                            </label>--}}
-                                    {{--                                        </div>--}}
-                                    {{--                                        <div class="form-check form-check-inline">--}}
-                                    {{--                                            <label class="form-check-label">--}}
-                                    {{--                                                <input class="form-check-input" type="checkbox" value=""> b--}}
-                                    {{--                                                <span class="form-check-sign">--}}
-                                    {{--                              <span class="check"></span>--}}
-                                    {{--                            </span>--}}
-                                    {{--                                            </label>--}}
-                                    {{--                                        </div>--}}
-                                    {{--                                        <div class="form-check form-check-inline">--}}
-                                    {{--                                            <label class="form-check-label">--}}
-                                    {{--                                                <input class="form-check-input" type="checkbox" value=""> c--}}
-                                    {{--                                                <span class="form-check-sign">--}}
-                                    {{--                              <span class="check"></span>--}}
-                                    {{--                            </span>--}}
-                                    {{--                                            </label>--}}
-                                    {{--                                        </div>--}}
-                                    {{--                                    </div>--}}
-                                    {{--                                </div>--}}
                                 </div>
                                 <div class="tab-pane" id="messages">
-                                    sdfkhasdhklfhaskldfsf
+                                    <div class="row">
+                                        <div class="col-2">
+                                            <div class="form-group bmd-form-group">
+                                                <label for="cep" class="bmd-label-static">Cep</label>
+                                                <input type="text" class="form-control" id="cep" name="cep" placeholder="71.000-000" value="{{ $config->cep }}">
+                                            </div>
+                                        </div>
+                                        <div class="col-8">
+                                            <div class="form-group bmd-form-group">
+                                                <label for="endereco" class="bmd-label-static">Endereço</label>
+                                                <input type="text" class="form-control" name="endereco" id="endereco" placeholder="Ade Conjunto 22 loja 10" value="{{ $config->endereco }}">
+                                            </div>
+                                        </div>
+                                        <div class="col-2">
+                                            <div class="form-group bmd-form-group">
+                                                <label for="numero" class="bmd-label-static">Numero</label>
+                                                <input type="text" class="form-control" name="numero" id="numero" placeholder="Apto 10">
+                                            </div>
+                                        </div>
+                                        <div class="col-5">
+                                            <div class="form-group bmd-form-group">
+                                                <label for="bairro" class="bmd-label-static">Bairro</label>
+                                                <input type="text" class="form-control" name="bairro" id="bairro" placeholder="Taguatinga" value="{{ $config->bairro }}">
+                                            </div>
+                                        </div>
+                                        <div class="col-5">
+                                            <div class="form-group bmd-form-group">
+                                                <label for="cidade" class="bmd-label-static">Cidade</label>
+                                                <input type="text" class="form-control" name="cidade" id="cidade" placeholder="Brasilia" value="{{ $config->cidade }}">
+                                            </div>
+                                        </div>
+                                        <div class="col-2">
+                                            <div class="form-group bmd-form-group">
+                                                <label for="uf" class="bmd-label-static">UF</label>
+                                                <input type="text" class="form-control" name="uf" id="uf" placeholder="DF" value="{{ $config->uf }}">
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="tab-pane" id="settings">
                                     <div class="row">
-                                        <div class="col-6">
+                                        <div class="col-4">
                                             <div class="form-group bmd-form-group">
                                                 <label for="smtpHost" class="bmd-label-static">Host</label>
-                                                <input type="text" class="form-control" id="smtpHost" placeholder="smtp.gmail.com">
+                                                <input type="text" class="form-control" name="smtpHost" id="smtpHost" placeholder="smtp.gmail.com" value="{{ $config->smtp_host }}">
                                             </div>
                                         </div>
                                         <div class="col-4">
                                             <div class="form-group bmd-form-group">
-                                                <label for="smtpPorta" class="bmd-label-static">Host</label>
-                                                <input type="number" class="form-control" id="smtpPorta" min="1" max="65535" placeholder="587">
+                                                <label for="smtpPorta" class="bmd-label-static">Porta</label>
+                                                <input type="number" class="form-control" name="smtpPorta" id="smtpPorta" min="1" max="65535" placeholder="587" value="{{ $config->smtp_porta }}">
+                                            </div>
+                                        </div>
+                                        <div class="col-2">
+                                            <div class="form-group bmd-form-group">
+                                                <label for="crypto" class="bmd-label-static">Criptografia</label>
+                                                <input type="text" class="form-control" name="cripto" id="crypto" placeholder="TLS" value="{{ $config->smtp_cripto }}">
                                             </div>
                                         </div>
                                         <div class="col-2">
                                             <div class="form-check">
                                                 <label class="form-check-label">
-                                                    <input class="form-check-input" type="checkbox" value=""> Ativar
+                                                    <input class="form-check-input" type="checkbox" name="smtpAtivo" value="" @if($config->smtp_ativo) checked @endif> Ativar
                                                     <span class="form-check-sign">
-                                                <span class="check"></span>
-                                            </span>
+                                                    <span class="check"></span>
+                                                </span>
                                                 </label>
                                             </div>
                                         </div>
                                         <div class="col-6">
                                             <div class="form-group bmd-form-group">
                                                 <label for="smtpEmail" class="bmd-label-static">E-Mail</label>
-                                                <input type="email" class="form-control" id="smtpEmail" placeholder="nome@gmail.com">
+                                                <input type="email" class="form-control" name="smtpEmail" id="smtpEmail" placeholder="nome@gmail.com" value="{{ $config->smtp_email }}">
                                             </div>
                                         </div>
                                         <div class="col-6">
                                             <div class="form-group bmd-form-group">
                                                 <label for="smtpSenha" class="bmd-label-static">Senha</label>
-                                                <input type="password" class="form-control" id="smtpSenha" placeholder="******">
+                                                <input type="password" class="form-control" name="smtpSenha" id="smtpSenha" placeholder="******" value="{{ $config->smtp_senha }}">
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </form>
-                    </div>
-                    <div class="card-footer border-top">
-                        <hr>
-                        <a class="btn btn-lg btn-success float-right" href="{{ route('cursos.create') }}">Salvar Alterações</a>
-                    </div>
+                        </div>
+                        <div class="card-footer border-top">
+                            <hr>
+                            <button class="btn btn-lg btn-success float-right" type="submit">Salvar Alterações</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -269,57 +253,45 @@
 
 
 @section('jsimport')
+
     <script>
-        $(document).ready(function () {
-        {{--    $.ajaxSetup({--}}
-        {{--        headers: {--}}
-        {{--            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')--}}
-        {{--        }--}}
-        {{--    });--}}
+        $(document).ready(function() {
+            // FileInput
+            $('.form-file-simple .inputFileVisible').click(function() {
+                $(this).siblings('.inputFileHidden').trigger('click');
+            });
 
-        {{--    $('.remove').on('click', function (event) {--}}
-        {{--        swal({--}}
-        {{--            title               : 'Excluir usuário ?',--}}
-        {{--            text                : "Atenção, esta ação não poderá ser desfeita!",--}}
-        {{--            type                : 'warning',--}}
-        {{--            showCancelButton    : true,--}}
-        {{--            confirmButtonColor  : '#3085d6',--}}
-        {{--            cancelButtonColor   : '#d33',--}}
-        {{--            confirmButtonText   : 'Sim, delete!',--}}
-        {{--            cancelButtonText    : 'Cancelar',--}}
-        {{--            reverseButtons: true,--}}
-        {{--        }).then((response) => {--}}
-        {{--            if (response) {--}}
-        {{--                $.ajax({--}}
-        {{--                    url : "{{ url('cursos')}}" + '/' + $(this).attr('data-delete'),--}}
-        {{--                    type : "POST",--}}
-        {{--                    data : {'_method' : 'DELETE'},--}}
-        {{--                    success: function(){--}}
-        {{--                        swal({--}}
-        {{--                            type    : 'success',--}}
-        {{--                            title   : "Success!",--}}
-        {{--                            text    : "Usuário removido com sucesso.",--}}
-        {{--                            icon    : "success",--}}
-        {{--                            timer   : '1500'--}}
-        {{--                        }).then(() => {--}}
-        {{--                            location.reload();--}}
-        {{--                        })--}}
+            $('.form-file-simple .inputFileHidden').change(function() {
+                let filename = $(this).val().replace(/C:\\fakepath\\/i, '');
+                $(this).siblings('.inputFileVisible').val(filename);
+            });
 
-        {{--                    },--}}
-        {{--                    error : function(data){--}}
-        {{--                        swal({--}}
-        {{--                            title   : 'Opps...',--}}
-        {{--                            text    : data.message,--}}
-        {{--                            type    : 'error',--}}
-        {{--                            timer   : '1500'--}}
-        {{--                        })--}}
-        {{--                    }--}}
-        {{--                })--}}
-        {{--            } else {--}}
-        {{--                swal("Your imaginary file is safe!");--}}
-        {{--            }--}}
-        {{--        });--}}
-        {{--    });--}}
+            $('.form-file-multiple .inputFileVisible, .form-file-multiple .input-group-btn').click(function() {
+                $(this).parent().parent().find('.inputFileHidden').trigger('click');
+                $(this).parent().parent().addClass('is-focused');
+            });
+
+            $('.form-file-multiple .inputFileHidden').change(function() {
+                let names = '';
+                for (let i = 0; i < $(this).get(0).files.length; ++i) {
+                    if (i < $(this).get(0).files.length - 1) {
+                        names += $(this).get(0).files.item(i).name + ',';
+                    } else {
+                        names += $(this).get(0).files.item(i).name;
+                    }
+                }
+                if (names){
+                    $(this).siblings('.input-group').find('.inputFileVisible').val(names);
+                }
+            });
+
+            $('.form-file-multiple .btn').on('focus', function() {
+                $(this).parent().siblings().trigger('focus');
+            });
+
+            $('.form-file-multiple .btn').on('focusout', function() {
+                $(this).parent().siblings().trigger('focusout');
+            });
         });
     </script>
 @endsection
