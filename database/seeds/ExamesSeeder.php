@@ -1,8 +1,7 @@
 <?php
 
-use App\Conteudo;
+use App\Curso;
 use App\Exame;
-use App\Turma;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Str;
 
@@ -15,11 +14,11 @@ class ExamesSeeder extends Seeder
      */
     public function run()
     {
-        $turma = Turma::first();
+        $curso = Curso::first();
         for ($i = 0; $i < 3; $i++){
             $exame = new Exame([
-                'turma_id' => $turma->id,
-                'titulo' => 'Exame ' . $i . ': '.Str::random(10),
+                'curso_id' => $curso->id,
+                'titulo' => 'Curso ' . $i . ': '.Str::random(10),
                 'status' => $i % 2 == 0,
             ]);
             $exame->save();

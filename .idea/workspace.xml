@@ -2,68 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="791ead94-c4a5-498e-9ad8-4b19119a04c6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Cupom.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Aluno/CursosController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Aluno/TurmasController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/CuponsController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/MensagensController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Middleware/CheckUser.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Notificacao.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Notifications/ActivationMail.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Notifications/InAppNotifications.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Notifications/InvoicePaid.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2019_09_27_171113_create_cupons_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2019_09_28_003855_create_notificacoes_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2019_09_28_022226_create_notifications_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/seeds/ConfigTableSeeder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/seeds/CuponsTableSeeder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/seeds/NotificacoesTableSeeder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/notification.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/escudo-sdredes.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/sdredes.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/notification.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/aluno/cursos/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/aluno/cursos/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/aluno/cursos/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/aluno/cursos/show.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/cupons/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/cupons/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/cupons/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/mail/invoice/paid.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/mensagens/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storage/dotenv-editor/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/Cesar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/Cesar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Curso.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Curso.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Exame.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Exame.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ConfigController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ConfigController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UsersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UsersController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_09_20_152600_create_exames_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_09_20_152600_create_exames_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_09_20_152616_create_conteudos_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_09_20_152616_create_conteudos_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/ConteudosSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/ConteudosSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/CursosTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/CursosTableSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/UsersTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/UsersTableSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/apple-icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/img/apple-icon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/favicon.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/img/favicon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/js/material-dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/js/material-dashboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/categorias/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/categorias/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/config/config.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/config/config.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/cursos/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/cursos/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/cursos/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/cursos/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/notifications/flash-message.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/notifications/flash-message.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/partial/menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partial/menu.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/partial/navbar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partial/navbar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/turmas/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/turmas/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/usuarios/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/usuarios/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/usuarios/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/usuarios/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/ExamesSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/ExamesSeeder.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -202,7 +143,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/aluno/cursos" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -240,9 +181,6 @@
       <method v="2" />
     </configuration>
   </component>
-  <component name="ServiceViewManager">
-    <option name="showServicesTree" value="false" />
-  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -278,6 +216,14 @@
       <workItem from="1569597299894" duration="28912000" />
       <workItem from="1569677514692" duration="24542000" />
       <workItem from="1569845612978" duration="3556000" />
+      <workItem from="1571091994830" duration="655000" />
+      <workItem from="1571140036301" duration="595000" />
+      <workItem from="1571478480263" duration="103000" />
+      <workItem from="1571485525483" duration="457000" />
+      <workItem from="1571486169460" duration="598000" />
+      <workItem from="1571692150771" duration="1330000" />
+      <workItem from="1571969786920" duration="9000" />
+      <workItem from="1572479942830" duration="779000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1568322282082</created>
