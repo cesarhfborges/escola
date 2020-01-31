@@ -39,7 +39,7 @@
                             </div>
                             <div class="card-body ">
                                 <div class="form-group">
-                                    <input id="email" type="email" name="email" placeholder="E-Mail" class="form-control @error('email') is-invalid @enderror" value="@if (old('email')) {{ old('email') }} @else cesar@sdredes.com.br @endif" required autocomplete="email" autofocus>
+                                    <input id="email" type="email" name="email" placeholder="E-Mail" class="form-control @error('email') is-invalid @enderror" value="@if (old('email')) {{ old('email') }} @else cesarhfborges@gmail.com @endif" required autocomplete="email" autofocus>
                                     @error('email')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>

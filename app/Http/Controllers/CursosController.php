@@ -9,22 +9,14 @@ use Illuminate\Support\Facades\Validator;
 
 class CursosController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function index()
     {
         $cursos = Curso::with('categoria')->get();
         return view('cursos.index')->with('cursos', $cursos);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function create()
     {
         $categorias = Categoria::get();
@@ -105,14 +97,10 @@ class CursosController extends Controller
         }
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function destroy($id)
     {
-        //
+        $curso = Curso::findOrFail($id);
+        $curso->delete();
+        return response()->json(['error', 'Não foi possivel deletar'], 200);
     }
 }

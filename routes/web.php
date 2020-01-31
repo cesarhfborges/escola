@@ -26,21 +26,27 @@ Route::group([
 
     Route::resource('mensagens', 'MensagensController');
 
-    Route::group([
-        'prefix' => '/cursos'
-    ], function(){
-        Route::resource('categorias', 'CategoriasController');
-        Route::resource('cursos', 'CursosController');
-        Route::resource('turmas', 'TurmasController');
-        Route::resource('turmas.conteudo', 'ConteudoController');
-//        Route::resource('/turmas/{turma}/conteudo/{conteudo}', 'ConteudoController');
-//        Route::resource('/turmas/{id}/conteudo/', 'ConteudoController');
+    Route::resource('cursos', 'CursosController');
+    Route::resource('cursos.conteudo', 'ConteudoController');
+    Route::resource('cursos.exames', 'ExamesController');
+    Route::resource('categorias', 'CategoriasController', ['prefix' => 'cursos']);
+    Route::resource('turmas', 'TurmasController', ['prefix' => 'cursos']);
 
-
-        //Aluno Controller
-        Route::resource('disponiveis', 'Aluno\CursosController')->only(['index', 'show']);
-        Route::resource('disponiveis.turmas', 'Aluno\TurmasController')->only(['index']);
-    });
+//    Route::group([
+//        'prefix' => '/cursos'
+//    ], function(){
+//
+////        Route::resource('turmas.conteudo', 'ConteudoController');
+//
+//
+////        Route::resource('/turmas/{turma}/conteudo/{conteudo}', 'ConteudoController');
+////        Route::resource('/turmas/{id}/conteudo/', 'ConteudoController');
+//
+//
+//        //Aluno Controller
+//        Route::resource('disponiveis', 'Aluno\CursosController')->only(['index', 'show']);
+//        Route::resource('disponiveis.turmas', 'Aluno\TurmasController')->only(['index']);
+//    });
 
 
     Route::view('/view/pdf', 'viewers.pdf')->name('viewer.pdf');

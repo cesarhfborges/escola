@@ -13,7 +13,7 @@ class ConfigTableSeeder extends Seeder
     public function run()
     {
         $config = new Config([
-            'nome_site' => 'SdManager',
+            'nome_site' => 'Escola',
             'avatar' => '',
             'favicon' => 'assets/img/favicon.png',
             'endereco' => 'Ade Conjunto 22',

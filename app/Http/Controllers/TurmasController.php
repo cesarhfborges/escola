@@ -8,12 +8,7 @@ use Illuminate\Http\Response;
 
 class TurmasController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @param Request $request
-     * @return Response
-     */
+
     public function index(Request $request)
     {
         $turmas = Turma::with('curso')->where('curso_id', $request->curso)->get();
@@ -52,12 +47,7 @@ class TurmasController extends Controller
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return Response
-     */
+
     public function edit($id)
     {
         $turma = Turma::with(['curso', 'conteudo', 'exames'])->findOrFail($id);
@@ -86,4 +76,5 @@ class TurmasController extends Controller
     {
         //
     }
+
 }

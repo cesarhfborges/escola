@@ -78,6 +78,7 @@
 <!--   Core JS Files   -->
 <script src="{{ asset('assets/js/core/jquery.min.js') }}"></script>
 <script src="{{ asset('assets/js/core/popper.min.js') }}"></script>
+<script src="{{ asset('assets/js/core/jquery-ui.min.js') }}"></script>
 <script src="{{ asset('assets/js/core/bootstrap-material-design.min.js') }}"></script>
 <script src="{{ asset('assets/js/plugins/perfect-scrollbar.jquery.min.js') }}"></script>
 <!-- Plugin for the momentJs  -->
@@ -125,6 +126,9 @@
 <script src="{{ asset('assets/quill/dist/quill-emoji.js') }}"></script>
 <script src="{{ asset('assets/quill/image-resize.min.js') }}"></script>
 <script src="{{ asset('assets/js/notification.js') }}"></script>
+
+{{--scripts uteis em todo o projeto--}}
+<script src="{{ asset('pages/util/util.js') }}"></script>
 
 @yield('jsimport')
 @include('notifications.flash-message')

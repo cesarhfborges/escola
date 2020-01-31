@@ -2,9 +2,58 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="791ead94-c4a5-498e-9ad8-4b19119a04c6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/cesar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/video/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/video/video-js.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/video/videojs.logobrand.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/core/jquery-ui.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/video/pt-BR.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/video/video.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/video/videojs-ie8.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/video/videojs.logobrand.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/video/videojs.logobrand.v5.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/video/videojs.watermark.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/pages/conteudo/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/pages/conteudo/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/pages/util/util.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/videos/video_teste.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/conteudo/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/Cesar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sdacademy.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sdacademy.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Conteudo.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Conteudo.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ConteudoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ConteudoController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CursosController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CursosController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TurmasController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TurmasController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Turma.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Turma.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_09_20_152616_create_conteudos_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_09_20_152616_create_conteudos_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/ConfigTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/ConfigTableSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/UsersTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/UsersTableSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/apple-icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/img/apple-icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/escudo-sdredes.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/img/escudo-sdredes.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/favicon.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/img/favicon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/sdredes.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/img/sdredes.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/conteudo/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/conteudo/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/conteudo/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/conteudo/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/cursos/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/cursos/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/partial/menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partial/menu.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/turmas/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/turmas/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/turmas/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/turmas/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,6 +75,12 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="PhpDebugGeneral" notify_if_session_was_finished_without_being_paused="false" xdebug_force_break_when_no_path_mapping="false" xdebug_force_break_when_outside_project="false" />
+  <component name="PhpServers">
+    <servers>
+      <server host="localhost" id="f9e0884d-496d-49aa-97bc-20c3ce5d8baa" name="localhost" port="8000" />
+    </servers>
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -131,53 +186,78 @@
       <path value="$PROJECT_DIR$/vendor/spatie/laravel-activitylog" />
       <path value="$PROJECT_DIR$/vendor/laravel-admin-ext/media-player" />
       <path value="$PROJECT_DIR$/vendor/sven/artisan-view" />
+      <path value="$PROJECT_DIR$/vendor/symfony/error-handler" />
     </include_path>
   </component>
   <component name="ProjectId" id="1QkCH8pTgJAjD9YlEkaK3vYclTS" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/conteudo" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.debug" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\laravel\escola\resources\views\conteudo" />
+      <recent name="C:\laravel\escola\public\assets\js\video" />
+      <recent name="C:\laravel\escola" />
       <recent name="C:\laravel\sdacademy\resources\views\aluno\cursos" />
       <recent name="C:\laravel\sdacademy\resources\views\aluno" />
-      <recent name="C:\laravel\sdacademy\resources\views\conteudo" />
-      <recent name="C:\laravel\sdacademy\public\assets\js\plugins" />
-      <recent name="C:\laravel\sdacademy\resources\views\turmas" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\laravel\sdacademy\resources\views" />
       <recent name="C:\laravel\sdacademy\public\assets\quill" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager">
-    <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
-      <TestRunner scope="XML" />
+  <component name="RunManager" selected="Laravel.Unnamed">
+    <configuration name="Unnamed" type="LaravelStorm_run_conf_serve" factoryName="Laravel" activateToolWindowBeforeRun="false">
+      <option name="host" value="localhost" />
+      <option name="port" value="8000" />
+      <option name="route" value="/" />
+      <option name="browser" value="" />
+      <option name="interpreterName" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="watch" type="js.build_tools.npm" activateToolWindowBeforeRun="false" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="watch" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Laravel.Unnamed" />
+      <item itemvalue="npm.watch" />
+    </list>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -222,6 +302,8 @@
       <workItem from="1571692150771" duration="1330000" />
       <workItem from="1571969786920" duration="9000" />
       <workItem from="1572479942830" duration="839000" />
+      <workItem from="1580387055074" duration="11474000" />
+      <workItem from="1580478760975" duration="16177000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1568322282082</created>
@@ -306,5 +388,83 @@
     <MESSAGE value="Terceiro update" />
     <MESSAGE value="lp ptbr adicionado&#10;Config sendo criado." />
     <option name="LAST_COMMIT_MESSAGE" value="lp ptbr adicionado&#10;Config sendo criado." />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="452" y="100" key="#Notifications" timestamp="1580395649810">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="452" y="100" key="#Notifications/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1580395649810" />
+    <state x="414" y="172" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1580482133006">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="414" y="172" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1580482133006" />
+    <state x="627" y="222" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1580392771328">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="627" y="222" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1580392771328" />
+    <state x="690" y="222" key="FileChooserDialogImpl" timestamp="1580486574746">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="690" y="222" key="FileChooserDialogImpl/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1580486574746" />
+    <state width="1865" height="271" key="GridCell.Tab.0.bottom" timestamp="1580483408684">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1865" height="271" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1580483408684" />
+    <state width="1865" height="271" key="GridCell.Tab.0.center" timestamp="1580483408684">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1865" height="271" key="GridCell.Tab.0.center/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1580483408684" />
+    <state width="1865" height="271" key="GridCell.Tab.0.left" timestamp="1580483408684">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1865" height="271" key="GridCell.Tab.0.left/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1580483408684" />
+    <state width="1865" height="271" key="GridCell.Tab.0.right" timestamp="1580483408684">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1865" height="271" key="GridCell.Tab.0.right/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1580483408684" />
+    <state width="1865" height="444" key="GridCell.Tab.1.bottom" timestamp="1580480441607">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1865" height="444" key="GridCell.Tab.1.bottom/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1580480441607" />
+    <state width="1865" height="444" key="GridCell.Tab.1.center" timestamp="1580480441607">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1865" height="444" key="GridCell.Tab.1.center/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1580480441607" />
+    <state width="1865" height="444" key="GridCell.Tab.1.left" timestamp="1580480441607">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1865" height="444" key="GridCell.Tab.1.left/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1580480441607" />
+    <state width="1865" height="444" key="GridCell.Tab.1.right" timestamp="1580480441607">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1865" height="444" key="GridCell.Tab.1.right/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1580480441607" />
+    <state width="1865" height="444" key="GridCell.Tab.2.bottom" timestamp="1580480441607">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1865" height="444" key="GridCell.Tab.2.bottom/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1580480441607" />
+    <state width="1865" height="444" key="GridCell.Tab.2.center" timestamp="1580480441607">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1865" height="444" key="GridCell.Tab.2.center/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1580480441607" />
+    <state width="1865" height="444" key="GridCell.Tab.2.left" timestamp="1580480441607">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1865" height="444" key="GridCell.Tab.2.left/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1580480441607" />
+    <state width="1865" height="444" key="GridCell.Tab.2.right" timestamp="1580480441607">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1865" height="444" key="GridCell.Tab.2.right/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1580480441607" />
+    <state x="352" y="82" key="SettingsEditor" timestamp="1580395668830">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="352" y="82" key="SettingsEditor/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1580395668830" />
+    <state x="532" y="239" key="run.anything.popup" timestamp="1580480066700">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="532" y="239" key="run.anything.popup/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1580480066700" />
+    <state x="532" y="0" width="840" height="1032" key="search.everywhere.popup" timestamp="1580494832720">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="532" y="0" width="840" height="1032" key="search.everywhere.popup/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1580494832720" />
   </component>
 </project>

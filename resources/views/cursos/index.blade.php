@@ -62,13 +62,13 @@
                                                 <a href="{{ route('turmas.index', ['curso' => $curso]) }}" class="btn btn-outline-primary">
                                                     <i class="material-icons">format_align_justify</i> Turmas
                                                 </a>
-                                                <a href="{{ route('cursos.edit', ['curso' => $curso]) }}" class="btn btn-outline-info">
+                                                <a href="{{ route('cursos.conteudo.index', $curso) }}" class="btn btn-outline-info">
                                                     <i class="material-icons">inbox</i> Conteudo
                                                 </a>
                                                 <a href="{{ route('cursos.edit', ['curso' => $curso]) }}" class="btn btn-outline-warning edit">
                                                     <i class="material-icons">dvr</i> Editar
                                                 </a>
-                                                <button type="button" data-delete="{{ $curso->id }}" class="btn btn-outline-danger remove">
+                                                <button type="button" class="btn btn-outline-danger btn-delete" data-route="{{ route('cursos.destroy', $curso) }}" data-csrf="{{ csrf_token() }}">
                                                     <i class="material-icons">close</i> Excluir
                                                 </button>
                                             </td>
@@ -97,50 +97,6 @@
                 headers: {
                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                 }
-            });
-
-            $('.remove').on('click', function (event) {
-                swal({
-                    title               : 'Excluir usuário ?',
-                    text                : "Atenção, esta ação não poderá ser desfeita!",
-                    type                : 'warning',
-                    showCancelButton    : true,
-                    confirmButtonColor  : '#3085d6',
-                    cancelButtonColor   : '#d33',
-                    confirmButtonText   : 'Sim, delete!',
-                    cancelButtonText    : 'Cancelar',
-                    reverseButtons: true,
-                }).then((response) => {
-                    if (response) {
-                        $.ajax({
-                            url : "{{ url('cursos')}}" + '/' + $(this).attr('data-delete'),
-                            type : "POST",
-                            data : {'_method' : 'DELETE'},
-                            success: function(){
-                                swal({
-                                    type    : 'success',
-                                    title   : "Success!",
-                                    text    : "Usuário removido com sucesso.",
-                                    icon    : "success",
-                                    timer   : '1500'
-                                }).then(() => {
-                                    location.reload();
-                                })
-
-                            },
-                            error : function(data){
-                                swal({
-                                    title   : 'Opps...',
-                                    text    : data.message,
-                                    type    : 'error',
-                                    timer   : '1500'
-                                })
-                            }
-                        })
-                    } else {
-                        swal("Your imaginary file is safe!");
-                    }
-                });
             });
         });
     </script>

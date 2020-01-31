@@ -17,11 +17,13 @@ class CreateConteudosTable extends Migration
             $table->bigIncrements('id');
             $table->unsignedBigInteger('curso_id');
 
+            $table->integer('ordem')->default(0);
+
             $table->string('titulo')->nullable(false);
             $table->string('modulo')->nullable(true);
             $table->longText('avatar')->nullable(true);
 
-            $table->enum('tipo', ['pdf','imagem','video','audio','iframe','url','nenhum'])->default('nenhum');
+            $table->enum('tipo', ['pdf','imagem','video','audio','iframe','url','youtube','nenhum'])->default('nenhum');
             $table->longText('tipoURL')->nullable(true);
 
             $table->longText('descricao')->nullable('true');

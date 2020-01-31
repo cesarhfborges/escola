@@ -23,11 +23,11 @@ class Turma extends Model
 
     public function conteudo()
     {
-        return $this->hasMany(Conteudo::class, 'turma_id');
+        return $this->hasMany(Conteudo::class, 'curso_id');
     }
 
     public function exames()
     {
-        return $this->hasMany(Exame::class, 'turma_id');
+        return $this->hasMany(Exame::class, 'curso_id');
     }
 }

@@ -77,6 +77,24 @@
                                     <span class="sidebar-normal"> Cursos </span>
                                 </a>
                             </li>
+                            <li class="nav-item ">
+                                <a class="nav-link collapsed" data-toggle="collapse" href="#componentsCollapse" aria-expanded="false">
+                                    <span class="sidebar-mini"> CT </span>
+                                    <span class="sidebar-normal"> Categorias
+                                        <b class="caret"></b>
+                                    </span>
+                                </a>
+                                <div class="collapse" id="componentsCollapse" style="">
+                                    <ul class="nav">
+                                        <li class="nav-item ">
+                                            <a class="nav-link" href="#0">
+                                                <span class="sidebar-mini"> CTA </span>
+                                                <span class="sidebar-normal"> Adicionar </span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
                             {{--                        <li class="nav-item ">--}}
                             {{--                            <a class="nav-link" href="../examples/pages/timeline.html">--}}
                             {{--                                <span class="sidebar-mini"> QT </span>--}}
