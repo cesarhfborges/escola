@@ -48,8 +48,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/quill/quill-autoresize.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/notification.css') }}">
 
-    @yield('cssimport')
-
+    @stack('cssimport')
 </head>
 <body id="body" class="" style="overflow: hidden;">
 <script>
@@ -130,7 +129,7 @@
 {{--scripts uteis em todo o projeto--}}
 <script src="{{ asset('pages/util/util.js') }}"></script>
 
-@yield('jsimport')
+@stack('jsimport')
 @include('notifications.flash-message')
 
 </body>

@@ -57,9 +57,9 @@ class ConteudoController extends Controller
         //
     }
 
-    public function edit($curso, $conteudo)
+    public function edit(Curso $curso, $id)
     {
-        $conteudo = Conteudo::findOrFail($conteudo);
+        $conteudo = Conteudo::where('curso_id', $curso->id)->where('id', $id)->firstOrFail();
         return view('conteudo.edit', ['conteudo' => $conteudo, 'curso' => $curso]);
     }
 

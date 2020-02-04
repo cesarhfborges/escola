@@ -1,9 +1,9 @@
 @extends('layouts.app')
 
-@section('cssimport')
+@push('cssimport')
     <link href="{{ asset('assets/css/video/video-js.css') }}" rel="stylesheet" />
     <link href="{{ asset('assets/css/video/index.css') }}" rel="stylesheet">
-@stop
+@endpush
 
 
 @section('content')
@@ -148,7 +148,7 @@
     </div>
 @endsection
 
-@section('jsimport')
+@push('jsimport')
     <script src="{{ asset('assets/js/video/video.js') }}"></script>
     <!-- If you'd like to support IE8 (for Video.js versions prior to v7) -->
     <script src="{{ asset('assets/js/video/videojs-ie8.min.js') }}"></script>
@@ -296,4 +296,4 @@
             });
         });
     </script>
-@endsection
+@endpush

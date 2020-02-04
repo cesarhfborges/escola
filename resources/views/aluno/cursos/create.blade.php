@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
-@section('cssimport')
+@push('cssimport')
     <link rel="stylesheet" href="{{ asset('assets/css/cropper/croppie.min.css') }}">
-@stop
+@endpush
 
 
 @section('content')
@@ -100,7 +100,7 @@
     </div>
 @endsection
 
-@section('jsimport')
+@push('jsimport')
     <script src="{{ asset('assets/js/cropper/croppie.js') }}"></script>
     <script src="{{ asset('assets/js/mask/inputMaskPlugin.js') }}"></script>
     <script type="text/javascript">
@@ -245,4 +245,4 @@
             });
         });
     </script>
-@stop
+@endpush

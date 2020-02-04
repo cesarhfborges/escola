@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
-@section('cssimport')
+@push('cssimport')
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/cropper/croppie.min.css') }}">
-@stop
+@endpush
 
 @section('content')
     <div class="container-fluid">
@@ -195,7 +195,7 @@
     </div>
 @endsection
 
-@section('jsimport')
+@push('jsimport')
     <script src="{{ asset('assets/js/cropper/croppie.js') }}"></script>
     <script type="text/javascript">
 
@@ -305,5 +305,5 @@
             });
         });
     </script>
-@stop
+@endpush
 

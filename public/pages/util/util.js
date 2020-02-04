@@ -1,4 +1,10 @@
 $(document).ready(function () {
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
+
     $(".btn-delete").on("click", function (e) {
         let el = $(this);
         e.preventDefault;
@@ -17,8 +23,7 @@ $(document).ready(function () {
                     url: el.attr('data-route'),
                     type: "POST",
                     data: {
-                        '_method': 'DELETE',
-                        "_token": el.attr('data-csrf')
+                        '_method': 'DELETE'
                     },
                     success: function (data) {
                         Swal.fire({

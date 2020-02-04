@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('cssimport')
+@push('cssimport')
     <link rel="stylesheet" href="{{ asset('assets/css/cropper/croppie.min.css') }}">
     <style>
         .sticky-top
@@ -8,7 +8,7 @@
             top: 40px;
         }
     </style>
-@stop
+@endpush
 
 
 @section('content')
@@ -24,7 +24,7 @@
                             <small class="category">Cursos</small>
                         </h4>
                     </div>
-                    <form method="post" action="{{ route('turmas.update', $turma->id) }}">
+                    <form method="post" action="{{ route('cursos.turmas.update', [$curso, $turma]) }}">
                         @csrf
                         @method('PATCH')
                         <div class="card-body">
@@ -115,27 +115,27 @@
                                                     <th class="text-right">Opções</th>
                                                 </tr>
                                                 </thead>
-                                                <tbody>
+                                                <tbody class="border-bottom">
                                                 @foreach($turma->conteudo as $conteudo)
                                                     <tr>
-                                                        <td class="text-center">{{ $conteudo->id }}</td>
-                                                        <td>{{ $conteudo->titulo }}</td>
-                                                        <td>{{ $conteudo->tipo }}</td>
-                                                        <td>{{ $conteudo->tipoURL }}</td>
-                                                        <td>
+                                                        <td class="text-center py-0">{{ $conteudo->id }}</td>
+                                                        <td class="py-0">{{ $conteudo->titulo }}</td>
+                                                        <td class="py-0">{{ $conteudo->tipo }}</td>
+                                                        <td class="py-0">{{ $conteudo->tipoURL }}</td>
+                                                        <td class="py-0">
                                                             <span class="{{ $conteudo->status ? 'text-success' : 'text-danger' }} font-weight-bold">
                                                                 {{ $conteudo->status ? 'liberado' : 'bloqueado' }}
                                                             </span>
                                                         </td>
-                                                        <td class="text-right">
-                                                            <div class="btn-group" role="group" aria-label="Exemplo básico">
+                                                        <td class="text-right py-0">
+                                                            <div class="btn-group btn-group-sm" role="group" aria-label="Exemplo básico">
                                                                 <button type="button" class="btn btn-outline-success" data-toggle="tooltip" data-trigger="focus hover" data-placement="top" title="Liberar Acesso">
                                                                     <i class="material-icons">done</i>
                                                                 </button>
                                                                 <button type="button" class="btn btn-outline-warning" data-toggle="tooltip" data-placement="top" title="Bloquear Acesso">
                                                                     <i class="material-icons">block</i>
                                                                 </button>
-                                                                <a href="{{ route('turmas.conteudo.edit', ['turma' => $turma->id, 'conteudo' => $conteudo]) }}" class="btn btn-outline-info" data-toggle="tooltip" data-placement="top" title="Editar">
+                                                                <a href="{{ route('cursos.conteudo.edit', ['curso' => $curso, 'conteudo' => $conteudo]) }}" class="btn btn-outline-info" data-toggle="tooltip" data-placement="top" title="Editar">
                                                                     <i class="material-icons">edit</i>
                                                                 </a>
                                                                 <button type="button" class="btn btn-outline-danger" data-toggle="tooltip" data-placement="top" title="Excluir">
@@ -183,15 +183,15 @@
                                                 <tbody>
                                                 @foreach($turma->exames as $exame)
                                                     <tr>
-                                                        <td class="text-center">{{ $exame->id }}</td>
-                                                        <td>{{ $exame->titulo }}</td>
-                                                        <td>
+                                                        <td class="text-center py-0">{{ $exame->id }}</td>
+                                                        <td class="py-0">{{ $exame->titulo }}</td>
+                                                        <td class="py-0">
                                                             <span class="{{ $exame->status ? 'text-success' : 'text-danger' }} font-weight-bold">
                                                                 {{ $exame->status ? 'liberado' : 'bloqueado' }}
                                                             </span>
                                                         </td>
-                                                        <td class="text-right">
-                                                            <div class="btn-group" role="group" aria-label="Exemplo básico">
+                                                        <td class="text-right py-0">
+                                                            <div class="btn-group btn-group-sm" role="group" aria-label="Exemplo básico">
                                                                 <button type="button" class="btn btn-outline-success modifAcesso" data-id="{{ $exame->id }}" data-action="liberar" data-route="{{ url('exame') }}" data-toggle="tooltip" data-trigger="focus hover" data-placement="top" title="Liberar Acesso">
                                                                     <i class="material-icons">done</i>
                                                                 </button>
@@ -222,7 +222,7 @@
     </div>
 @endsection
 
-@section('jsimport')
+@push('jsimport')
     <script src="{{ asset('assets/js/cropper/croppie.js') }}"></script>
     <script src="{{ asset('assets/js/mask/inputMaskPlugin.js') }}"></script>
     <script type="text/javascript">
@@ -288,4 +288,4 @@
             });
         });
     </script>
-@stop
+@endpush

@@ -252,7 +252,7 @@
 @endsection
 
 
-@section('jsimport')
+@push('jsimport')
 
     <script>
         $(document).ready(function() {
@@ -294,4 +294,4 @@
             });
         });
     </script>
-@endsection
+@endpush

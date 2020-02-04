@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('cssimport')
+@push('cssimport')
     <link rel="stylesheet" href="{{ asset('assets/css/cropper/croppie.min.css') }}">
     <link rel="stylesheet" href="{{ asset('pages/conteudo/index.css') }}">
     <style>
@@ -9,7 +9,7 @@
             top: 40px;
         }
     </style>
-@stop
+@endpush
 
 
 @section('content')
@@ -149,17 +149,11 @@
                                                         </td>
                                                         <td class="py-0 text-right">
                                                             <div class="btn-group btn-group-sm m-0" role="group" aria-label="Exemplo básico">
-                                                                <button type="button" class="btn btn-outline-success" data-toggle="tooltip" data-trigger="focus hover" data-placement="top" title="Liberar Acesso">
-                                                                    <i class="material-icons">done</i>
-                                                                </button>
-                                                                <button type="button" class="btn btn-outline-warning" data-toggle="tooltip" data-placement="top" title="Bloquear Acesso">
-                                                                    <i class="material-icons">block</i>
-                                                                </button>
-                                                                <a href="{{ route('cursos.conteudo.edit', [$curso, $conteudo]) }}" class="btn btn-outline-info" data-toggle="tooltip" data-placement="top" title="Editar">
-                                                                    <i class="material-icons">edit</i>
+                                                                <a href="{{ route('cursos.conteudo.edit', [$curso, $conteudo]) }}" class="btn btn-outline-info">
+                                                                    <i class="material-icons">edit</i> Editar
                                                                 </a>
-                                                                <button type="button" class="btn btn-outline-danger btn-delete" data-route="{{ route('cursos.conteudo.destroy', [$curso, $conteudo]) }}" data-csrf="{{ csrf_token() }}" data-toggle="tooltip" data-placement="top" title="Excluir">
-                                                                    <i class="material-icons">close</i>
+                                                                <button type="button" class="btn btn-outline-danger btn-delete" data-route="{{ route('cursos.conteudo.destroy', [$curso, $conteudo]) }}" >
+                                                                    <i class="material-icons">delete_outline</i> Excluir
                                                                 </button>
                                                             </div>
                                                         </td>
@@ -198,6 +192,7 @@
                                                     <th class="text-center">#</th>
                                                     <th>Nome Exame</th>
                                                     <th>Status</th>
+                                                    <th class="text-center">Total de Questões</th>
                                                     <th class="text-right">Opções</th>
                                                 </tr>
                                                 </thead>
@@ -214,19 +209,16 @@
                                                                 {{ $exame->status ? 'liberado' : 'bloqueado' }}
                                                             </span>
                                                         </td>
+                                                        <td class="py-0 text-center">
+                                                            20
+                                                        </td>
                                                         <td class="py-0 text-right">
                                                             <div class="btn-group btn-group-sm m-0" role="group" aria-label="Exemplo básico">
-                                                                <button type="button" class="btn btn-outline-success modifAcesso" data-id="{{ $exame->id }}" data-action="liberar" data-route="{{ url('exame') }}" data-toggle="tooltip" data-trigger="focus hover" data-placement="top" title="Liberar Acesso">
-                                                                    <i class="material-icons">done</i>
-                                                                </button>
-                                                                <button type="button" class="btn btn-outline-warning modifAcesso" data-id="{{ $exame->id }}" data-action="bloquear" data-route="{{ url('exame') }}" data-toggle="tooltip" data-placement="top" title="Bloquear Acesso">
-                                                                    <i class="material-icons">block</i>
-                                                                </button>
                                                                 <button type="button" class="btn btn-outline-info" data-toggle="tooltip" data-placement="top" title="Editar">
-                                                                    <i class="material-icons">edit</i>
+                                                                    <i class="material-icons">edit</i> Editar
                                                                 </button>
-                                                                <button type="button" class="btn btn-outline-danger btn-delete" data-route="{{ route('cursos.exames.destroy', [$curso, $conteudo]) }}" data-csrf="{{ csrf_token() }}" data-toggle="tooltip" data-placement="top" title="Excluir">
-                                                                    <i class="material-icons">close</i>
+                                                                <button type="button" class="btn btn-outline-danger btn-delete" data-route="{{ route('cursos.exames.destroy', [$curso, $conteudo]) }}"  data-toggle="tooltip" data-placement="top" title="Excluir">
+                                                                    <i class="material-icons">delete_outline</i> Excluir
                                                                 </button>
                                                             </div>
                                                         </td>
@@ -246,8 +238,8 @@
     </div>
 @endsection
 
-@section('jsimport')
+@push('jsimport')
     <script src="{{ asset('assets/js/cropper/croppie.js') }}"></script>
     <script src="{{ asset('assets/js/mask/inputMaskPlugin.js') }}"></script>
     <script src="{{ asset('pages/conteudo/index.js') }}"></script>
-@stop
+@endpush

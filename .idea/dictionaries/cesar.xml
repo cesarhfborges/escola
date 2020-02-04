@@ -4,15 +4,19 @@
       <w>bloqueado</w>
       <w>categorias</w>
       <w>conteudo</w>
+      <w>conteudos</w>
       <w>csrf</w>
+      <w>curso</w>
       <w>cursos</w>
       <w>descricao</w>
+      <w>exames</w>
       <w>imagem</w>
       <w>liberado</w>
       <w>nenhum</w>
       <w>ordem</w>
       <w>tiposelect</w>
       <w>titulo</w>
+      <w>turmas</w>
       <w>videojs</w>
     </words>
   </dictionary>

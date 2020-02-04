@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Curso;
 use App\Turma;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
@@ -9,10 +10,10 @@ use Illuminate\Http\Response;
 class TurmasController extends Controller
 {
 
-    public function index(Request $request)
+    public function index(Curso $curso, Request $request)
     {
-        $turmas = Turma::with('curso')->where('curso_id', $request->curso)->get();
-        return view('turmas.index')->with('turmas', $turmas);
+        $turmas = Turma::with('curso')->where('curso_id', $curso->id)->get();
+        return view('turmas.index', ['turmas' => $turmas, 'curso' => $curso]);
     }
 
     /**
@@ -48,10 +49,10 @@ class TurmasController extends Controller
     }
 
 
-    public function edit($id)
+    public function edit(Curso $curso, $id)
     {
         $turma = Turma::with(['curso', 'conteudo', 'exames'])->findOrFail($id);
-        return view('turmas.edit')->with('turma', $turma);
+        return view('turmas.edit', ['curso' => $curso, 'turma' => $turma])->with('turma', $turma);
     }
 
     /**

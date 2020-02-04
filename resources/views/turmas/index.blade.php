@@ -15,7 +15,7 @@
                             </div>
                             <div class="col-6">
                                 <a class="btn btn-success float-right"
-                                   href="{{ route('turmas.create') }}">Adicionar</a>
+                                   href="{{ route('cursos.turmas.create', $curso) }}">Adicionar</a>
                             </div>
                         </div>
                     </div>
@@ -53,14 +53,14 @@
                                     <tbody>
                                     @foreach($turmas as $turma)
                                         <tr>
-                                            <td class="text-center">{{ printf("%08d", $turma->id) }}</td>
-                                            <td>{{ $turma->curso->nome }}</td>
-                                            <td>{{ \Carbon\Carbon::createFromFormat('Y-m-d', $turma->inicio)->format('d/m/Y') }}</td>
-                                            <td>{{ \Carbon\Carbon::createFromFormat('Y-m-d', $turma->termino)->format('d/m/Y') }}</td>
-                                            <td class="text-center">{{ $turma->tipo }}</td>
-                                            <td class="text-center">0</td>
-                                            <td class="text-right">
-                                                <a href="{{ route('turmas.edit', ['turma' => $turma]) }}" class="btn btn-link btn-warning edit">
+                                            <td class="text-center py-0">{{ printf("%08d", $turma->id) }}</td>
+                                            <td class="py-0">{{ $turma->curso->nome }}</td>
+                                            <td class="py-0">{{ \Carbon\Carbon::createFromFormat('Y-m-d', $turma->inicio)->format('d/m/Y') }}</td>
+                                            <td class="py-0">{{ \Carbon\Carbon::createFromFormat('Y-m-d', $turma->termino)->format('d/m/Y') }}</td>
+                                            <td class="text-center py-0">{{ $turma->tipo }}</td>
+                                            <td class="text-center py-0">0</td>
+                                            <td class="text-right py-0">
+                                                <a href="{{ route('cursos.turmas.edit', [$curso, $turma]) }}" class="btn btn-link btn-warning edit">
                                                     <i class="material-icons">dvr</i> Editar
                                                 </a>
                                                 <button type="button" data-delete="{{ $turma->id }}" class="btn btn-link btn-danger remove">
@@ -85,7 +85,7 @@
 @endsection
 
 
-@section('jsimport')
+@push('jsimport')
     <script>
         $(document).ready(function () {
             $.ajaxSetup({
@@ -139,4 +139,4 @@
             });
         });
     </script>
-@endsection
+@endpush

@@ -2,57 +2,39 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="791ead94-c4a5-498e-9ad8-4b19119a04c6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/cesar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/video/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/video/video-js.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/video/videojs.logobrand.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/core/jquery-ui.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/video/pt-BR.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/video/video.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/video/videojs-ie8.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/video/videojs.logobrand.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/video/videojs.logobrand.v5.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/video/videojs.watermark.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/pages/conteudo/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/pages/conteudo/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/pages/util/util.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/videos/video_teste.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/conteudo/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/Cesar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sdacademy.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sdacademy.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/ExamesController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/lightbox/jquery.fancybox.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/lightbox/jquery.fancybox.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/lightbox/jquery.gdocsviewer.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/pages/conteudo/edit.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/pages/conteudo/edit.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/cesar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/cesar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Conteudo.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Conteudo.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ConteudoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ConteudoController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CursosController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CursosController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TurmasController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TurmasController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Turma.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Turma.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_09_20_152616_create_conteudos_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_09_20_152616_create_conteudos_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/ConfigTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/ConfigTableSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/UsersTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/UsersTableSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/apple-icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/img/apple-icon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/escudo-sdredes.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/img/escudo-sdredes.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/favicon.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/img/favicon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/sdredes.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/img/sdredes.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/material-dashboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/material-dashboard.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/pages/util/util.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/pages/util/util.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/aluno/cursos/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/aluno/cursos/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/aluno/cursos/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/aluno/cursos/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/aluno/cursos/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/aluno/cursos/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/aluno/cursos/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/aluno/cursos/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/categorias/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/categorias/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/categorias/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/categorias/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/categorias/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/categorias/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/config/config.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/config/config.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/conteudo/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/conteudo/create.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/conteudo/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/conteudo/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/conteudo/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/conteudo/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/cursos/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/cursos/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/cursos/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/cursos/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/cursos/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/cursos/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/partial/menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partial/menu.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/turmas/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/turmas/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/turmas/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/turmas/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/usuarios/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/usuarios/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/usuarios/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/usuarios/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/usuarios/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/usuarios/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,8 +50,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -211,16 +193,17 @@
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.debug" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\laravel\escola\public\pages\conteudo" />
+      <recent name="C:\laravel\sdacademy\resources\views" />
+      <recent name="C:\laravel\sdacademy\public\assets\quill" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\laravel\escola\resources\views\conteudo" />
       <recent name="C:\laravel\escola\public\assets\js\video" />
       <recent name="C:\laravel\escola" />
       <recent name="C:\laravel\sdacademy\resources\views\aluno\cursos" />
       <recent name="C:\laravel\sdacademy\resources\views\aluno" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\laravel\sdacademy\resources\views" />
-      <recent name="C:\laravel\sdacademy\public\assets\quill" />
     </key>
   </component>
   <component name="RunManager" selected="Laravel.Unnamed">
@@ -303,7 +286,9 @@
       <workItem from="1571969786920" duration="9000" />
       <workItem from="1572479942830" duration="839000" />
       <workItem from="1580387055074" duration="11474000" />
-      <workItem from="1580478760975" duration="16177000" />
+      <workItem from="1580478760975" duration="17181000" />
+      <workItem from="1580513131304" duration="4976000" />
+      <workItem from="1580568903807" duration="3678000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1568322282082</created>
@@ -361,7 +346,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572480793387</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Diversos Ajustes, novas funcoes, termino da migracao de exames e conteudo para dentro dos cursos.">
+      <created>1580495674743</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1580495674743</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -382,12 +374,14 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="first commit" />
     <MESSAGE value="Segundo update" />
     <MESSAGE value="Terceiro update" />
     <MESSAGE value="lp ptbr adicionado&#10;Config sendo criado." />
-    <option name="LAST_COMMIT_MESSAGE" value="lp ptbr adicionado&#10;Config sendo criado." />
+    <MESSAGE value="Diversos Ajustes, novas funcoes, termino da migracao de exames e conteudo para dentro dos cursos." />
+    <option name="LAST_COMMIT_MESSAGE" value="Diversos Ajustes, novas funcoes, termino da migracao de exames e conteudo para dentro dos cursos." />
   </component>
   <component name="WindowStateProjectService">
     <state x="452" y="100" key="#Notifications" timestamp="1580395649810">
@@ -402,62 +396,70 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="627" y="222" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1580392771328" />
+    <state x="508" y="41" key="CommitChangelistDialog2" timestamp="1580495672439">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="508" y="41" key="CommitChangelistDialog2/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1580495672439" />
     <state x="690" y="222" key="FileChooserDialogImpl" timestamp="1580486574746">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="690" y="222" key="FileChooserDialogImpl/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1580486574746" />
-    <state width="1865" height="271" key="GridCell.Tab.0.bottom" timestamp="1580483408684">
+    <state width="1865" height="271" key="GridCell.Tab.0.bottom" timestamp="1580496586650">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1865" height="271" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1580483408684" />
-    <state width="1865" height="271" key="GridCell.Tab.0.center" timestamp="1580483408684">
+    <state width="1865" height="271" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1580496586650" />
+    <state width="1865" height="271" key="GridCell.Tab.0.center" timestamp="1580496586650">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1865" height="271" key="GridCell.Tab.0.center/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1580483408684" />
-    <state width="1865" height="271" key="GridCell.Tab.0.left" timestamp="1580483408684">
+    <state width="1865" height="271" key="GridCell.Tab.0.center/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1580496586650" />
+    <state width="1865" height="271" key="GridCell.Tab.0.left" timestamp="1580496586650">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1865" height="271" key="GridCell.Tab.0.left/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1580483408684" />
-    <state width="1865" height="271" key="GridCell.Tab.0.right" timestamp="1580483408684">
+    <state width="1865" height="271" key="GridCell.Tab.0.left/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1580496586650" />
+    <state width="1865" height="271" key="GridCell.Tab.0.right" timestamp="1580496586650">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1865" height="271" key="GridCell.Tab.0.right/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1580483408684" />
-    <state width="1865" height="444" key="GridCell.Tab.1.bottom" timestamp="1580480441607">
+    <state width="1865" height="271" key="GridCell.Tab.0.right/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1580496586650" />
+    <state width="1865" height="444" key="GridCell.Tab.1.bottom" timestamp="1580496586647">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1865" height="444" key="GridCell.Tab.1.bottom/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1580480441607" />
-    <state width="1865" height="444" key="GridCell.Tab.1.center" timestamp="1580480441607">
+    <state width="1865" height="444" key="GridCell.Tab.1.bottom/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1580496586647" />
+    <state width="1865" height="444" key="GridCell.Tab.1.center" timestamp="1580496586647">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1865" height="444" key="GridCell.Tab.1.center/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1580480441607" />
-    <state width="1865" height="444" key="GridCell.Tab.1.left" timestamp="1580480441607">
+    <state width="1865" height="444" key="GridCell.Tab.1.center/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1580496586647" />
+    <state width="1865" height="444" key="GridCell.Tab.1.left" timestamp="1580496586647">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1865" height="444" key="GridCell.Tab.1.left/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1580480441607" />
-    <state width="1865" height="444" key="GridCell.Tab.1.right" timestamp="1580480441607">
+    <state width="1865" height="444" key="GridCell.Tab.1.left/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1580496586647" />
+    <state width="1865" height="444" key="GridCell.Tab.1.right" timestamp="1580496586647">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1865" height="444" key="GridCell.Tab.1.right/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1580480441607" />
-    <state width="1865" height="444" key="GridCell.Tab.2.bottom" timestamp="1580480441607">
+    <state width="1865" height="444" key="GridCell.Tab.1.right/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1580496586647" />
+    <state width="1865" height="444" key="GridCell.Tab.2.bottom" timestamp="1580496586647">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1865" height="444" key="GridCell.Tab.2.bottom/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1580480441607" />
-    <state width="1865" height="444" key="GridCell.Tab.2.center" timestamp="1580480441607">
+    <state width="1865" height="444" key="GridCell.Tab.2.bottom/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1580496586647" />
+    <state width="1865" height="444" key="GridCell.Tab.2.center" timestamp="1580496586647">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1865" height="444" key="GridCell.Tab.2.center/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1580480441607" />
-    <state width="1865" height="444" key="GridCell.Tab.2.left" timestamp="1580480441607">
+    <state width="1865" height="444" key="GridCell.Tab.2.center/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1580496586647" />
+    <state width="1865" height="444" key="GridCell.Tab.2.left" timestamp="1580496586647">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1865" height="444" key="GridCell.Tab.2.left/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1580480441607" />
-    <state width="1865" height="444" key="GridCell.Tab.2.right" timestamp="1580480441607">
+    <state width="1865" height="444" key="GridCell.Tab.2.left/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1580496586647" />
+    <state width="1865" height="444" key="GridCell.Tab.2.right" timestamp="1580496586647">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1865" height="444" key="GridCell.Tab.2.right/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1580480441607" />
+    <state width="1865" height="444" key="GridCell.Tab.2.right/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1580496586647" />
     <state x="352" y="82" key="SettingsEditor" timestamp="1580395668830">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="352" y="82" key="SettingsEditor/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1580395668830" />
+    <state x="452" y="192" key="Vcs.Push.Dialog.v2" timestamp="1580495678028">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="452" y="192" key="Vcs.Push.Dialog.v2/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1580495678028" />
     <state x="532" y="239" key="run.anything.popup" timestamp="1580480066700">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>

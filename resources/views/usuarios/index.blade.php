@@ -87,7 +87,7 @@
 @endsection
 
 
-@section('jsimport')
+@push('jsimport')
     <script>
         $(document).ready(function () {
             $.ajaxSetup({
@@ -143,4 +143,4 @@
             });
         });
     </script>
-@endsection
+@endpush

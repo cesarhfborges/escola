@@ -51,26 +51,28 @@
                                     <tbody>
                                     @foreach($cursos as $curso)
                                         <tr>
-                                            <td class="text-center">
-                                                <img src="{{ url($curso->avatar) }}" height="60" alt="">
+                                            <td class="text-center py-1">
+                                                <img src="{{ url($curso->avatar) }}" height="44" alt="">
                                             </td>
-                                            <td>{{ $curso->nome }}</td>
-                                            <td>{{ $curso->categoria->nome }}</td>
-                                            <td class="text-center">{{ $curso->custo }}</td>
-                                            <td class="text-center">R$ {{ number_format($curso->preco, 2, ',', '.') }}</td>
-                                            <td class="text-right">
-                                                <a href="{{ route('turmas.index', ['curso' => $curso]) }}" class="btn btn-outline-primary">
-                                                    <i class="material-icons">format_align_justify</i> Turmas
-                                                </a>
-                                                <a href="{{ route('cursos.conteudo.index', $curso) }}" class="btn btn-outline-info">
-                                                    <i class="material-icons">inbox</i> Conteudo
-                                                </a>
-                                                <a href="{{ route('cursos.edit', ['curso' => $curso]) }}" class="btn btn-outline-warning edit">
-                                                    <i class="material-icons">dvr</i> Editar
-                                                </a>
-                                                <button type="button" class="btn btn-outline-danger btn-delete" data-route="{{ route('cursos.destroy', $curso) }}" data-csrf="{{ csrf_token() }}">
-                                                    <i class="material-icons">close</i> Excluir
-                                                </button>
+                                            <td class="py-0">{{ $curso->nome }}</td>
+                                            <td class="py-0">{{ $curso->categoria->nome }}</td>
+                                            <td class="text-center py-0">{{ $curso->custo }}</td>
+                                            <td class="text-center py-0">R$ {{ number_format($curso->preco, 2, ',', '.') }}</td>
+                                            <td class="text-right py-0">
+                                                <div class="btn-group btn-group-sm m-0" role="group" aria-label="Exemplo básico">
+                                                    <a href="{{ route('cursos.turmas.index', $curso) }}" class="btn btn-outline-primary">
+                                                        <i class="material-icons">format_align_justify</i> Turmas
+                                                    </a>
+                                                    <a href="{{ route('cursos.conteudo.index', $curso) }}" class="btn btn-outline-info">
+                                                        <i class="material-icons">inbox</i> Conteudo
+                                                    </a>
+                                                    <a href="{{ route('cursos.edit', ['curso' => $curso]) }}" class="btn btn-outline-warning">
+                                                        <i class="material-icons">dvr</i> Editar
+                                                    </a>
+                                                    <button type="button" class="btn btn-outline-danger btn-delete" data-route="{{ route('cursos.destroy', $curso) }}">
+                                                        <i class="material-icons">close</i> Excluir
+                                                    </button>
+                                                </div>
                                             </td>
                                         </tr>
                                     @endforeach
@@ -90,7 +92,7 @@
 @endsection
 
 
-@section('jsimport')
+@push('jsimport')
     <script>
         $(document).ready(function () {
             $.ajaxSetup({
@@ -100,4 +102,4 @@
             });
         });
     </script>
-@endsection
+@endpush

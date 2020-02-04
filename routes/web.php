@@ -30,7 +30,7 @@ Route::group([
     Route::resource('cursos.conteudo', 'ConteudoController');
     Route::resource('cursos.exames', 'ExamesController');
     Route::resource('categorias', 'CategoriasController', ['prefix' => 'cursos']);
-    Route::resource('turmas', 'TurmasController', ['prefix' => 'cursos']);
+    Route::resource('cursos.turmas', 'TurmasController', ['prefix' => 'cursos']);
 
 //    Route::group([
 //        'prefix' => '/cursos'
